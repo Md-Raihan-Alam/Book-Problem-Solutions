@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Write a program that creates a string that represents an 8×8 grid, using newline
+        characters to separate lines. At each position of the grid there is either a space
+        or a "#" character. The characters should form a chessboard.
+        Passing this string to console.log should show something like this:
+        # # # #
+        # # # #
+        # # # #
+        # # # #
+        # # # #
+        # # # #
+        # # # #
+        # # # #
+        When you have a program that generates this pattern, define a binding size
+        = 8 and change the program so that it works for any size, outputting a grid
+        of the given width and height.
+    -->
+</body>
+<script type="text/javascript">
+    var size=prompt("Enter a binding size for chessboard which will be used for width and height:");
+    var markTotal=Math.floor(size/2);
+    let oneRow="";
+    let secondRow="";
+    let rowNo=1;
+    for(let i=0;i<markTotal;i++) oneRow+=" #";
+    for(let j=0;j<markTotal;j++) secondRow+="# ";
+    for(let k=1;k<=size;k++) {
+        if(rowNo===1){
+            console.log(oneRow+"\n");
+            rowNo=2;
+        }else{
+            console.log(secondRow+"\n");
+            rowNo=1;
+        }
+    }
+</script>
+</html>

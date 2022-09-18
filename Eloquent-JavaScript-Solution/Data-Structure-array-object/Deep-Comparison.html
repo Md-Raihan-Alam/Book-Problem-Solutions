@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    function deepEqual(a,b)
+    {
+        if(typeof(a)===typeof(b))
+            {
+                if(typeof(a)==="object")
+                {
+                    if(a.length===b.length)
+                    {
+                        if(typeof(a)===Array)
+                        {
+                            // console.log("Array");
+                            for(let i=0;i<a.length();i++)
+                            {
+                                if(a[i]!==b[i])
+                                    return false;
+                            }
+                            return true;
+                        }
+                        else {
+                            // console.log("Object");
+                            for(let i=0;i<a.length;i++)
+                            {
+                                if(a[i].key===b[i].key)
+                                {
+                                    if(a[i].value!==b[i].value)
+                                        return false;   
+                                }else
+                                    return false;
+                            }
+                            return true;
+                        }
+                        console.log("Length");
+                    }
+                }else{
+                    console.log("somethingElse");
+                    if(a==b)
+                    {
+                        return true;
+                    }else
+                        return false;
+                }
+            }
+        return false;
+    }
+</script>
+</html>
