@@ -1,0 +1,8 @@
+INIT maxVal to 0 
+INIT minVal to LONG_INT
+INPUT arr[]
+FOR each x value in array
+    if x>arr then
+        maxVal=x
+    if x<arr then
+        minVal=x
