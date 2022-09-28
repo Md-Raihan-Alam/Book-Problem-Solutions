@@ -1,0 +1,2 @@
+function f takes the copy of variable and output the increment value but do not change the original
+function g takes the address of variable and output the increment value and also change the value of original
