@@ -1,0 +1,9 @@
+INIT N to userInput
+INPUT arr[n]
+INIT J to begining of arr
+for each address x value from last in arr
+    INIT temp to address of x
+    INIT x to J
+    INIT J to temp
+    INCREMENT J
+    DCREMENT X
