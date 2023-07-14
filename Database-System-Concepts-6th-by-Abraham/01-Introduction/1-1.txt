@@ -1,0 +1,7 @@
+There are some disadvantage of database management system. Two of them are:
+    1.Increased cost: Database management systems can be expensive to set up and maintain. This includes
+                      the cost of hardware and software, data storage and staff traning and expense.
+    2.Complexity    : DBMX can be extremenly complext software. Developers, desginers, DBA and end-users
+                      of the database must have complete skills of DBMS if they wan to use it properly.if
+                      they do not understand this complext system then it may cause loss of data or database failure.
+    

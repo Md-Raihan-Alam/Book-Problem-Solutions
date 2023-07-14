@@ -1,0 +1,23 @@
+Here are five responsibilities of a Database Management System (DBMS) along with the problems that would arise if these responsibilities were not discharged:
+
+1. Data Security and Access Control:
+   - Responsibility: The DBMS is responsible for enforcing security measures to protect data from unauthorized access, ensuring authentication and access control mechanisms are in place.
+   - Problem if not discharged: Without proper security measures, sensitive data can be accessed, modified, or deleted by unauthorized individuals. This can lead to data breaches, privacy violations, compromised integrity, and potential legal or regulatory consequences.
+
+2. Data Integrity and Consistency:
+   - Responsibility: The DBMS enforces data integrity constraints, such as referential integrity, unique constraints, and check constraints, to ensure data accuracy and consistency.
+   - Problem if not discharged: Without enforcing data integrity, inconsistencies, inaccuracies, and duplicate data may occur. This can result in incorrect or unreliable information, making it challenging to trust and make informed decisions based on the data.
+
+3. Data Concurrency and Transaction Management:
+   - Responsibility: The DBMS manages concurrent access to data by multiple users or processes, providing mechanisms like locking, isolation levels, and transaction management to maintain data consistency and integrity.
+   - Problem if not discharged: Without proper concurrency control, conflicts can arise when multiple users try to access or modify the same data simultaneously. This can lead to data inconsistencies, lost updates, or dirty reads, jeopardizing data accuracy and reliability.
+
+4. Data Backup and Recovery:
+   - Responsibility: The DBMS provides backup and recovery mechanisms to ensure data durability and availability. It includes features like periodic backups, transaction logs, point-in-time recovery, and disaster recovery planning.
+   - Problem if not discharged: Without reliable backup and recovery mechanisms, data loss can occur due to hardware failures, software bugs, or human errors. In the event of system failures or disasters, there would be no means to recover lost data, resulting in significant financial losses and potentially irreparable damage to the organization.
+
+5. Performance Optimization and Query Processing:
+   - Respo nsibility: The DBMS optimizes query execution plans, manages indexes, caches frequently accessed data, and employs query optimization techniques to improve performance.
+   - Problem if not discharged: Without efficient query processing and performance optimization, database operations can be slow, causing delays in data retrieval and processing. This can impact overall system performance, user experience, and the ability to meet critical response time requirements.
+
+These responsibilities are crucial for a DBMS to effectively manage and safeguard data. Neglecting any of these responsibilities can lead to severe consequences, including data breaches, data inconsistencies, access control issues, data loss, poor system performance, and compromised decision-making based on unreliable data.

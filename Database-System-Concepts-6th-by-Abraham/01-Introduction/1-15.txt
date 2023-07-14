@@ -1,0 +1,18 @@
+In a social networking system like Facebook, several tables would be required to store different types of information. Here are three examples of tables that might be used:
+
+1. User Table:
+   - This table stores information about registered users of the social networking system.
+   - Columns may include user ID (primary key), username, password, email, full name, date of birth, gender, profile picture, and other relevant user details.
+   - Additional columns can be included to capture user preferences, privacy settings, and other user-specific attributes.
+
+2. Friendships Table:
+   - This table captures the relationships between users and their friends.
+   - Columns may include friendship ID (primary key), user ID of the user initiating the friendship (foreign key referencing the User table), user ID of the friend (foreign key referencing the User table), and a status indicating the current state of the friendship (e.g., pending, accepted, blocked).
+   - Additional columns can be included to track the date/time of the friendship request or any additional metadata associated with the friendship.
+
+3. Posts Table:
+   - This table is used to store posts made by users on the social networking system.
+   - Columns may include post ID (primary key), user ID of the post creator (foreign key referencing the User table), content of the post (text or multimedia), timestamp of the post, and privacy settings indicating who can view the post.
+   - Additional columns can be included to capture likes, comments, and other interactions associated with the post.
+
+These are just three examples of tables that would be used in a social networking system like Facebook. Depending on the specific features and functionality of the system, additional tables may be required to store information related to comments, likes, messages, notifications, groups, events, and more. The database schema would be designed to effectively capture and organize the various data elements and their relationships within the social networking system.

@@ -1,0 +1,9 @@
+Database systems support data manipulation using a declarative query language like SQL rather than just providing a library of programming language functions for several reasons:
+
+1. Simplified and Expressive Syntax:
+   Declarative query languages like SQL offer a simplified and expressive syntax specifically designed for querying and manipulating relational data. The SQL syntax allows users to express complex data retrieval and manipulation tasks concisely and intuitively, utilizing various clauses, operators, and functions built specifically for database operations. This makes it easier for non-programmers or individuals with limited programming knowledge to interact with databases and perform data manipulations without having to write detailed procedural code.
+
+2. Database System Control and Security:
+   By using a declarative query language like SQL, the database system can have better control over data access and security. The DBMS can enforce access control policies, authentication mechanisms, and data protection measures at the system level, ensuring data privacy, integrity, and security. With a library of C or C++ functions, it would be more challenging to implement and manage these system-level controls consistently across different applications, leading to potential security vulnerabilities.
+
+In summary, supporting data manipulation using a declarative query language like SQL offers advantages in terms of data independence, simplified syntax, query optimization, and system-level control and security. It allows users and applications to interact with the database at a higher level of abstraction, focusing on the "what" rather than the "how" of data manipulations, and leveraging the DBMS's capabilities for efficient and secure data processing.

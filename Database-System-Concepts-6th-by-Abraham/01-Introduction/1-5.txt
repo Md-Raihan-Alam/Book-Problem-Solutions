@@ -1,0 +1,23 @@
+Keeping data in a file-processing system, especially for a video site like YouTube, can have several disadvantages. Let's discuss the relevance of these points to the storage of actual video data and metadata:
+
+1. Data Inconsistency:
+   - Video Data: In a file-processing system, maintaining data consistency can be challenging. Updates or modifications to video data (e.g., editing, metadata changes) would require manual synchronization across multiple files, leading to potential inconsistencies.
+   - Metadata: Similarly, managing metadata consistency (title, uploader, tags, views) across various files can be prone to errors, making it difficult to ensure accurate and synchronized information.
+
+2. Data Redundancy:
+   - Video Data: File-processing systems may lead to data redundancy as videos are stored as separate files. If multiple videos share the same metadata (e.g., title, uploader), duplicating this information for each video file can consume unnecessary storage space.
+   - Metadata: Storing metadata within each video file can result in redundant storage of the same metadata, increasing storage requirements and making updates more cumbersome.
+
+3. Lack of Data Integrity:
+   - Video Data: File-processing systems do not provide built-in mechanisms to ensure data integrity, such as enforcing referential integrity or validating the consistency of video data. This can result in data corruption or inconsistencies that are not easily detected or corrected.
+   - Metadata: Without proper data integrity controls, it becomes challenging to maintain the accuracy and reliability of metadata, leading to potential errors or mismatches between video data and its associated metadata.
+
+4. Limited Scalability:
+   - Video Data: File-processing systems may not scale well when it comes to handling large volumes of video data. As the number of videos increases, managing individual files becomes inefficient, impacting storage, retrieval, and overall system performance.
+   - Metadata: Scaling metadata management becomes complex as the number of videos and associated metadata grows. Querying and managing metadata becomes slower and less efficient as the system expands.
+
+5. Limited Search and Query Capabilities:
+   - Video Data: File-processing systems lack advanced search and query capabilities, making it difficult to perform complex searches or filter videos based on specific criteria (e.g., title, tags, user views). Finding and retrieving videos based on metadata becomes cumbersome.
+   - Metadata: Similarly, performing advanced queries or analysis on metadata becomes challenging in a file-based system, restricting the ability to extract meaningful insights or generate recommendations based on metadata attributes.
+
+For a video site like YouTube, a more robust database management system (DBMS) would offer advantages over a file-processing system. A DBMS provides better data management, consistency, integrity, scalability, query capabilities, and performance optimizations specific to storing and retrieving video data and its associated metadata.

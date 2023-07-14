@@ -1,0 +1,15 @@
+Here are four applications commonly used that likely employ a database system to store persistent data:
+
+1. E-commerce Platform:
+   E-commerce platforms like Amazon, eBay, or Shopify rely on database systems to store product information, customer details, order history, inventory management, and transaction records. Databases enable efficient data retrieval, inventory tracking, and seamless order processing.
+
+2. Social Media Platforms:
+   Social media platforms such as Facebook, Instagram, or Twitter employ database systems to store user profiles, posts, comments, likes, and other interactions. Databases enable quick retrieval of personalized feeds, efficient data storage, and complex relationships between users and their connections.
+
+3. Content Management Systems (CMS):
+   Content Management Systems like WordPress, Drupal, or Joomla utilize database systems to store website content, user accounts, page structures, and configurations. Databases provide the ability to store and retrieve content efficiently, manage user permissions, and support dynamic website functionalities.
+
+4. Banking and Financial Systems:
+   Banking and financial systems, such as online banking platforms, stock trading platforms, or payment gateways, heavily rely on database systems for storing customer accounts, transaction records, balances, and financial data. Databases ensure secure data storage, transaction consistency, and support complex querying for financial reporting and analysis.
+
+These are just a few examples, but database systems are widely used across various industries and applications where persistent data storage, retrieval, and management are essential for efficient and reliable operations.

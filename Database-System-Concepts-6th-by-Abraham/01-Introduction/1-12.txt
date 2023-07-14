@@ -1,0 +1,14 @@
+The problem caused by the design of a single table combining the information from the "instructor" and "department" tables is data redundancy and update anomalies. Here are the problems associated with this design:
+
+1. Data Redundancy:
+   By combining the information from the "instructor" and "department" tables into a single "faculty" table, redundant information is introduced. In the example given, the information about the History department's building and budget is repeated in multiple rows. This redundancy leads to wastage of storage space and can result in inconsistencies if the redundant data is not properly maintained.
+
+2. Update Anomalies:
+   Updating the database becomes more complex and error-prone in the alternative design. If a change is made to the budget of the History department, it needs to be reflected in every tuple pertaining to the History department in the "faculty" table. Failure to update all relevant tuples would result in inconsistent data, where different rows show different budget values for the History department.
+
+   In contrast, in the original design with separate "instructor" and "department" tables, updating the budget of the History department requires modifying only a single row in the "department" table. This reduces the chances of inconsistencies and simplifies the updating process.
+
+3. Increased Update Cost:
+   The alternative design increases the cost of updates. As mentioned earlier, updating the budget of the History department in the "faculty" table requires modifying multiple rows. This incurs additional processing time and effort compared to the original design, where updates are limited to a single row in the "department" table.
+
+In summary, combining the information from multiple tables into a single table leads to data redundancy, update anomalies, and increased update costs. The original design with separate tables helps eliminate redundancy, simplifies updates, and reduces the chances of inconsistent data. Normalization techniques, like dividing data into separate tables and establishing relationships, are used to avoid these problems and ensure a more efficient and maintainable database design.
