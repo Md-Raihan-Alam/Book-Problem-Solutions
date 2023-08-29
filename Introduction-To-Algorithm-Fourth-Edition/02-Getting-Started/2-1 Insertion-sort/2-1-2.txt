@@ -1,0 +1,23 @@
+A loop invariant is a property that holds tru before and fater each iteration of a loop. For the given SUM-ARRAY procedure, let's defien the loop
+invariant as follows:
+
+Loop Invariant:At the beginning of iteration 'i', the variable 'sum' contains the sum of the lements in 'A[1:i]'.
+
+Now, let's prove the correctness of the SUM-ARRAY procedure using the principles of loop invariants. We will go through the initialization, 
+maintenance, and termination steps.
+
+Initialization:
+BEfore the loop starts ('i=1'), the loop invariant states the 'sum' should contain the sumof the lements in 'A[1:1]', which is just the first element of the array.
+Since no elements are added yet, 'sum' is correctly initialized to the first element of the array
+
+Maintenance:
+Assuming the loop invariant holds at the begining of iteration 'i', we want to show that it still holds at the beginning of iteration 'i+1'. During iteration, 'i' the loop body adds
+'A[i]' to 'sum'. Therefore, at the beginning of iteration 'i+1', 'sum' contains the sum of elements in 'A[1:i]' plus 'A[i]', which is the sum of element in 'A[1:i+1]'. This confirms
+that the loop invariant is mantained.
+
+Termincation:
+Once the loop completes ('i=n+1'), the loop invariant implies that 'sum' should contain the sum of elmenets in 'A[1:n]', as it's the sum of all elements in the array up to the last
+element. At this point, the loop termincates, and the SUM-ARRAY procedure returns the value of 'sum', which is indeed the sum of the elements in 'A[1:n]'.
+
+By demonstrating that the loop invariant holds throughout the initialization, maintenance, and termination steps,
+we've established the correctness of the SUM-ARRAY procedure. IT correctly returns the sum of numbers in the array 'A[1:n]'

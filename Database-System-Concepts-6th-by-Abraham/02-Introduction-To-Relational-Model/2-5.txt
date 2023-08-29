@@ -1,0 +1,5 @@
+First the both table of student and advisort will be combine by cross product then by selection
+operation the students that ID match with given ID will be seen, this will be the result.
+
+The result will include all attribute values of the "student" table followed by all attributes of the "advisor" table,
+followed by the "i id" attribute containing the ID of the student's advisor, A student who has more than one advisor will appear a corresponding number of times in the result.

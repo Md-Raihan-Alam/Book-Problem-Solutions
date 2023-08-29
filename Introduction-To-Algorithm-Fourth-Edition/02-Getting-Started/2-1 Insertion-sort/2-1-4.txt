@@ -1,0 +1,21 @@
+input x
+for i to A.length()
+    if A[i] = = x
+        return i
+return NIL
+
+Loop Invariant:
+At the beginning of iteration 'i', the value 'x' has not been found in the subarray 'A[0:i]'.
+
+Initialization:
+Before the loop starts ('i = 0'), the loop invariant states that the value 'x' has not been found in the subarray 'A[0:0]', which is just the first element of the array. This is true since no elements have been checked yet. The loop starts with the correct assumption.
+
+Maintenance:
+Assuming the loop invariant holds at the beginning of iteration 'i', we want to show that it still holds at the beginning of iteration 'i + 1'.
+
+During iteration 'i', the loop body checks if 'A[i]' is equal to 'x'. If the condition is true, the loop terminates early and returns 'i', which is the correct behavior since we found the value 'x' in the array. If the condition is false, we continue to the next iteration. The loop invariant still holds because the subarray being considered in the next iteration is 'A[0:i+1]', and since we did not find 'x' in the previous iterations, the invariant is still valid.
+
+Termination:
+The loop terminates in two cases: either 'A[i]' is found to be equal to 'x' (early termination) or the loop completes without finding a match ('i' reaches 'A.length()'). In the first case, the algorithm returns the index 'i', which is the correct index of the found value. In the second case, the loop invariant guarantees that 'x' has not been found in the entire array 'A', so the algorithm correctly returns 'NIL'.
+
+By demonstrating that the loop invariant holds throughout the initialization, maintenance, and termination steps, we've established the correctness of the linear search algorithm. It correctly returns the index of 'x' if it's present in the array or 'NIL' if it's not found.

@@ -1,0 +1,8 @@
+ContainsPairWithSum(S, x):
+    Sort(S)  // Θ(n lg n) time complexity
+    
+    for each a in S:  // Linear scan
+        diff = x - a
+        if BinarySearch(S, diff):  // Θ(lg n) time complexity
+            return true            
+    return false

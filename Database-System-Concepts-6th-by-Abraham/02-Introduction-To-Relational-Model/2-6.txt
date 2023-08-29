@@ -1,0 +1,3 @@
+a->for students who take courses year least 2009 selec them for takes and table and attributes that match from student table
+b->first join takes and student table and select who has taken courses in year least 2009
+c->first join takes and student table but display only ID,Name, course_id

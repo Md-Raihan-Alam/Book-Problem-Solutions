@@ -1,0 +1,10 @@
+RecursiveInsertionSort(A, n):
+    if n > 1:
+        RecursiveInsertionSort(A, n - 1)
+        key = A[n]
+        j = n - 1
+        while j > 0 and A[j] > key:
+            A[j + 1] = A[j]
+            j = j - 1
+        A[j + 1] = key
+the words time complexity is O(n^2)

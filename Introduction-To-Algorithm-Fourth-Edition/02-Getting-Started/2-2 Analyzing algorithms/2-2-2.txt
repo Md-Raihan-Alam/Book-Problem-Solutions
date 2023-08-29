@@ -1,0 +1,39 @@
+pseudo code for seletion sort:
+selectionSort(arr: array of elements)
+    n = length(arr)
+    for i = 0 to n - 2
+        minIndex = i
+        for j = i + 1 to n - 1
+            if arr[j] < arr[minIndex]
+                minIndex = j
+            end if
+        end for
+        if minIndex ≠ i
+            swap arr[i] and arr[minIndex]
+        end if
+    end for
+end procedure
+
+The selection sort algorithm maintains the following loop invariant:
+
+At the start of each iteration of the outer loop (for index `i`), the subarray `arr[0..i-1]` is sorted in ascending order, and the elements in the subarray `arr[i..n-1]` are greater than or equal to the elements in `arr[0..i-1]`.
+In other words, the loop invariant ensures that after each iteration of the outer loop, the first `i` elements of the array are in their correct sorted positions, and the remaining elements are larger than or equal to the sorted portion.
+This is why, during each iteration of the outer loop, the algorithm searches for the smallest element in the unsorted portion of the array (`arr[i..n-1]`) and swaps it with the element at the current position `i`. This action extends the sorted portion of the array by one element, thus maintaining the loop invariant.
+At the end of the algorithm, when the outer loop completes, the entire array is sorted, as the loop invariant holds for the final value of `i` (which is `n - 1`).
+
+In the selection sort algorithm, the outer loop iterates through the indices of the array from 0 to n - 2, where n is the number of elements in the array.
+This is because the last element in the array is already in its correct position after the previous iterations, so it doesn't need to be compared or swapped with other elements again.
+
+The worst-case running time of the selection sort algorithm is Θ(n^2), where 'n' is the number of elements in the array.
+In selection sort, during each iteration of the outer loop, the algorithm performs a linear search through the remaining unsorted portion of the array to find the smallest element. This linear search takes O(n) time
+.Since this search is done for each of the n elements in the array (except the last one),
+the total number of comparisons and swaps is proportional to n * n, which is n^2.
+Therefore, the worst-case running time of selection sort is Θ(n^2). This means that the number of operations the algorithm performs grows quadratically with 
+the number of elements in the input array. Selection sort is not efficient for large arrays and is generally outperformed by more advanced sorting algorithms like merge sort, quicksort, and heapsort, which have better average and worst-case time complexities.
+
+
+No, the best-case running time of the selection sort algorithm is not better than its worst-case running time. The best-case running time of selection sort is also Θ(n^2), where 'n' is the number of elements in the array.
+
+In selection sort, the algorithm always goes through the entire process of finding the smallest element in the unsorted portion and swapping it with the element at the current position, regardless of the initial order of the elements. This means that even if the input array is already sorted or nearly sorted,
+selection sort will still perform roughly the same number of comparisons and swaps as in the worst-case scenario.
+Due to this characteristic, selection sort has a consistent behavior regardless of the input order, resulting in both the best-case and worst-case running times being Θ(n^2). This makes selection sort generally inefficient for larger arrays compared to other sorting algorithms with better average and best-case performances, such as merge sort, quicksort, and heapsort.

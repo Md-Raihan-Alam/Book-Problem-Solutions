@@ -1,0 +1,4 @@
+a=>The appropriate primary keys are customer as customer_name, customer_street, customer_city can be unique and
+    account as account_number, branch_name, balance combine can be unique and depositor as customer_name, account_number
+    combine can be unique
+b=> the appropriate foriegn key can be customer, account or depsitor for same reason

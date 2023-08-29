@@ -1,0 +1,2 @@
+1. Sometimes we might have missing information, so we do not want any value there
+2. Sometimes we are not certain about a value but we do not want any uncertain info so we use null value

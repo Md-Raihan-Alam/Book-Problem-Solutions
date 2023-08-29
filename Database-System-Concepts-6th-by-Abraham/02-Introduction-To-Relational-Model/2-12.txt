@@ -1,0 +1,3 @@
+a=>π(person_name)(σ(company_name = "First Bank Corporation")(works))
+b=>π(person_name, city)(σ(company_name = "First Bank Corporation")(works ⋈ employee))
+c=>π(person_name, street, city)(σ(company_name = "First Bank Corporation" ∧ salary > 10000)(works ⋈ employee))

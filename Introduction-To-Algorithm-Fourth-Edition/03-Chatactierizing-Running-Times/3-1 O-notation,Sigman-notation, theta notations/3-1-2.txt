@@ -1,0 +1,21 @@
+this is the peudocode:
+selectionSort(arr: array of elements)
+    n = length(arr)
+    for i = 0 to n - 2
+        minIndex = i
+        for j = i + 1 to n - 1
+            if arr[j] < arr[minIndex]
+                minIndex = j
+            end if
+        end for
+        if minIndex ≠ i
+            swap arr[i] and arr[minIndex]
+        end if
+    end for
+end p
+in line 4 the outer loop takes total time 0 to n-2 times, and in innner loop in line 6 the total time is i+1 to n-1 times.
+so for average case, total loop takes (n-1)(n-2)(n-3)..+1 times so which is is like (n^2)/2 times.
+in worst case scenario, all loop will run on (n^2)/2 time
+in best case scenario, all loop will run on (n^2)/2 time
+in average case scenario, all loop will run on(n^2)/2 time
+In conclusion, the selection sort algorithm has a worst-case, best-case, and average-case time complexity of approximately O(n^2)

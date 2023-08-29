@@ -1,0 +1,15 @@
+1. Is 2^{n + 1} = O(2^n)?
+   
+   No, 2^{n + 1} is not O(2^n). In Big O notation, O(2^n) represents an upper bound on the growth rate of a function. If f(n) = O(2^n), it means that there exist constants c and n_0 such that f(n) \leq c \cdot 2^n for all n \geq n_0.
+
+   However, 2^{n + 1} grows faster than 2^n, and it is not bounded by c \cdot 2^n for any constant c and sufficiently large n. Therefore, 2^{n + 1} is not O(2^n).
+
+2. Is 2^{2n} = O(2^n)?
+   
+   Yes, 2^{2n} is O(2^n). In this case, 2^{2n} can be simplified as (2^n)^2, which is O(2^n). This is because 2^n is the base growth factor, and squaring it doesn't change its exponential nature. 
+
+   In other words, 2^{2n} is bounded above by a constant multiple of 2^n. This is what 2^{2n} = O(2^n) means; there exist constants c and n_0 such that 2^{2n} \leq c \cdot 2^n for all n \geq n_0.
+
+In summary:
+- 2^{n + 1} is **not** O(2^n).
+- 2^{2n} is O(2^n).

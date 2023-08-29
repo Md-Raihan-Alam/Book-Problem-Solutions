@@ -1,0 +1,11 @@
+Using a binary search instead of a linear search for finding the correct position to insert an element in the INSERTION-SORT procedure could potentially improve the average-case running time, but it would not improve the overall worst-case running time to Θ(n lg n). The worst-case time complexity of insertion sort would still remain Θ(n^2) even with a binary search.
+
+Let's break down why this is the case:
+
+1. **Binary Search for Insertion**: If you use binary search to find the correct position to insert an element into the sorted subarray, the average number of comparisons required to find the correct position would be reduced from linear (in a linear search) to logarithmic. This can improve the average-case time complexity from Θ(n^2) to Θ(n log n) for some cases.
+
+2. **Overall Worst-Case Time Complexity**: However, the worst-case time complexity of insertion sort is still dominated by the number of swaps needed to move elements into their correct positions. In the worst case, when the input array is sorted in reverse order, you would still need to make roughly n/2 swaps for the first element, n/2 - 1 swaps for the second element, and so on, resulting in a total of roughly (n^2) / 2 swaps. The binary search portion would still take logarithmic time for each element, which would be much smaller compared to the quadratic number of swaps.
+
+In essence, the binary search optimization might reduce the number of comparisons but wouldn't eliminate the quadratic number of swaps required in the worst case. Therefore, the worst-case time complexity of insertion sort would still be Θ(n^2), even with the binary search optimization.
+
+If you're looking for a sorting algorithm with a worst-case time complexity of Θ(n log n), you might want to consider algorithms like Merge Sort, Quick Sort, or Heap Sort.

@@ -1,0 +1,2 @@
+It might not be possible for s_id still b a primary key for having multiple teacher, because it will not longer remain unique but
+if i_id is used it may remain as primary key

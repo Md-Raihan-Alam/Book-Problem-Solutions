@@ -1,0 +1,22 @@
+Assume a traveling-salesman that need to go certain places in a city and he want to minimize the time. So he can use to 
+find shortest distance of every two points to save his time.
+
+The Shortest Path problem and the Traveling Salesperson problem are both optimization problems in graph theory, but they have distinct objectives and constraints.
+
+Shortest Path Problem:
+The Shortest Path problem seeks to find the shortest path between two vertices in a graph. It aims to minimize the total weight or cost of traversing from a source vertex to a destination vertex. This problem assumes that the graph is directed or undirected, and each edge has a non-negative weight or cost associated with it. The objective is to determine the path with the minimum cumulative weight.
+
+Algorithms commonly used to solve the Shortest Path problem include Dijkstra's algorithm, Bellman-Ford algorithm, and Floyd-Warshall algorithm. These algorithms find the shortest path based on various criteria such as single-source, single-destination, or all-pairs shortest paths.
+
+Traveling Salesperson Problem:
+The Traveling Salesperson problem (TSP) is a combinatorial optimization problem. It involves finding the shortest possible route that visits a set of given cities and returns to the starting city, with the constraint that each city is visited exactly once. The objective is to minimize the total distance or cost of the complete tour.
+
+The TSP is an NP-hard problem, meaning that no known algorithm can solve it efficiently for large input sizes. Various techniques are employed to approximate solutions, including heuristic algorithms like the nearest neighbor algorithm, 2-opt algorithm, and genetic algorithms.
+
+Key Differences:
+1. Objective: The Shortest Path problem aims to find the shortest distance or path between two vertices, while the Traveling Salesperson problem seeks to find the shortest tour that visits all cities and returns to the starting city.
+2. Constraints: In the Shortest Path problem, there are typically no constraints on visiting vertices, and multiple paths may exist between two vertices. In contrast, the Traveling Salesperson problem requires visiting all cities exactly once and returning to the starting city, without any repetitions.
+3. Complexity: The Shortest Path problem can be solved efficiently using algorithms like Dijkstra's algorithm or the Bellman-Ford algorithm. However, the Traveling Salesperson problem is computationally challenging and is known to be NP-hard, requiring approximation algorithms to find suboptimal solutions.
+4. Solution Space: The Shortest Path problem typically involves finding a single optimal path between two vertices. In contrast, the Traveling Salesperson problem involves finding the optimal sequence of visiting multiple cities, which results in a much larger solution space.
+
+In summary, the Shortest Path problem focuses on finding the shortest path between two vertices, while the Traveling Salesperson problem deals with finding the shortest tour that visits all cities exactly once. The latter is a more complex problem with additional constraints and a larger solution space, making it computationally challenging to find exact solutions for large instances.

@@ -1,0 +1,3 @@
+Yes, day and start_time are part of primary key, becuase they can not occur more than once for a entity and it will 
+be unique for each time and mutiple can not match for entities. end_time can occur for mutiple events and that's why
+should not be consider as a part of parimary key

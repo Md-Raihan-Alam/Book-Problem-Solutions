@@ -1,0 +1,3 @@
+a=>π(loan_number)(σ(amount > 10000)(loan))
+b=>π(customer_name)(σ(balance > 6000)(depositor ⋈ account))
+c=>π(customer_name)(σ(balance > 6000 ∧ branch_name = "Uptown")(depositor ⋈ account))

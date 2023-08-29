@@ -1,0 +1,41 @@
+```
+BinarySearch(A, key):
+    left = 1
+    right = length(A)
+    
+    while left <= right:
+        mid = (left + right) / 2
+        
+        if A[mid] == key:
+            return mid
+        else if A[mid] < key:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return NOT_FOUND
+```
+
+In this pseudocode, `A` is the sorted array in which we want to perform the binary search, and `key` is the element we are searching for.
+
+Now, let's analyze the worst-case running time of the binary search algorithm and argue that it's Θ(lg n):
+
+1. In each iteration of the `while` loop, the algorithm divides the search range in half. At the beginning of each iteration, the range of possible positions for `key` is reduced by at least half.
+
+2. Initially, the range spans the entire array, which is of size `n`.
+
+3. After the first iteration, the range is reduced to approximately `n / 2`.
+
+4. After the second iteration, the range is reduced to approximately `n / 4`.
+
+5. This process continues, halving the search range with each iteration.
+
+6. The binary search algorithm stops when the search range becomes empty (when `left` becomes greater than `right`), indicating that the element was not found.
+
+7. In the worst case, the binary search algorithm continues to halve the search range until it reaches a single element or an empty range. This can be modeled as repeatedly dividing `n` by 2 until we get to 1 or an extremely small value.
+
+8. The number of times we need to divide `n` by 2 until it becomes 1 is roughly `lg n` (logarithm base 2 of `n`).
+
+9. Therefore, the worst-case running time of binary search is proportional to `lg n`, and the notation Θ(lg n) represents the tight bound for this worst-case running time.
+
+In conclusion, the binary search algorithm's worst-case running time is indeed Θ(lg n), making it a highly efficient algorithm for searching in a sorted array.

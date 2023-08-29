@@ -1,0 +1,23 @@
+In linear search, we're looking for an element `x` within an array `A`. The worst-case scenario for linear search occurs when we have to check every element in the array
+before finding the desired element or determining its absence. In the average case, we need to consider the expected number of elements checked when searching for an 
+element that could be at any position in the array.
+
+Let's analyze both cases:
+Average Case:
+In the average case, we assume that the element `x` we are looking for is equally likely to be at any position in the array. This means that, on average, we would check half of the elements before finding or not finding `x`.
+The average number of elements checked in the average case is (n + 1) / 2, where n is the length of the array `A`.
+Worst Case:
+The worst-case scenario occurs when we have to check every element in the array before finding or not finding the element `x`. This happens if the element is at the last position in the array or if it's not present in the array at all.
+In the worst case, we need to check all n elements in the array.
+
+Running Times:
+Using theta notation:
+- The average-case running time of linear search is Θ(n), where n is the length of the array. This is because, on average, we need to check (n + 1) / 2 elements.
+- The worst-case running time of linear search is also Θ(n), where n is the length of the array. This is because we could potentially have to check all n elements before finding or not finding the element `x`.
+
+To justify this:
+
+- In the average case, the constant factor doesn't matter when calculating the average time complexity, as it's based on the proportion of the elements checked.
+- In the worst case, we're checking every element in the array, so the time complexity is proportional to the number of elements in the array.
+
+In summary, linear search has an average-case and worst-case time complexity of Θ(n), making it a linear time algorithm.

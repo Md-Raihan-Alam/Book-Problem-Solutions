@@ -1,0 +1,3 @@
+a. π(name)(σ(city = "Miami")(employee))
+b. π(name)(σ(salary > 100000)(employee))
+c. π(name)(σ(city = "Miami" ∧ salary > 100000)(employee))

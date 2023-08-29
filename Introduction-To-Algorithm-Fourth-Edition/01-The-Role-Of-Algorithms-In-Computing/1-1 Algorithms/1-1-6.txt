@@ -1,0 +1,13 @@
+Real-world problem: Online Fraud Detection
+
+Online fraud detection is a real-world problem that can have varying input availability scenarios. In this context, the system needs to analyze online transactions in real-time to identify fraudulent activities and protect users from financial losses. The input data consists of transaction details, such as transaction amount, user information, location, and other relevant parameters.
+
+Sometimes, the entire input is available before solving the problem:
+In certain cases, the online fraud detection system may receive all the necessary transaction information upfront before processing the data. For example, when processing batch transactions from a particular time period, all the transaction data can be collected and made available for analysis. The system can then use various techniques, such as machine learning algorithms or rule-based systems, to analyze the entire dataset and detect fraudulent transactions.
+
+Other times, the input arrives over time:
+In many scenarios, the input arrives in real-time as transactions occur, and the fraud detection system needs to analyze the data incrementally as it becomes available. For instance, when monitoring online credit card transactions, the system receives transaction data in a streaming fashion, where each transaction arrives one at a time. The system must process each incoming transaction immediately, make a real-time assessment of its potential fraudulence based on existing information, and take appropriate actions, such as triggering alerts or blocking suspicious transactions.
+
+In such cases, the system needs to efficiently handle the incoming data stream, process it in real-time, and update its fraud detection models or rules dynamically as new information becomes available. Techniques like stream processing, online learning, and real-time analytics are employed to continuously analyze the evolving data stream and adapt the fraud detection mechanisms accordingly. The system must strike a balance between making quick decisions based on the available data and maintaining accuracy in detecting fraudulent activities.
+
+Handling both scenarios requires robust and scalable systems capable of processing and analyzing large volumes of transaction data, whether in a batch or streaming fashion, to detect and prevent fraudulent behavior effectively.

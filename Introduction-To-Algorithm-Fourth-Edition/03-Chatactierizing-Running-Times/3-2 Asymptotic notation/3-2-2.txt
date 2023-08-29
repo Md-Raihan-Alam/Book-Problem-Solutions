@@ -1,0 +1,12 @@
+The statement "The running time of algorithm A is at least O(n^2)" is actually a contradiction in terms.
+
+In Big O notation, O(f(n)) represents an upper bound on the growth rate of a function. It describes how the function's growth compares to or is less than a specific 
+function (f(n)) as (n) becomes larger. For example, if we say an algorithm's running time is O(n^2), it means the growth rate of the algorithm's running time is no worse
+than quadratic (squared) as n increases.
+
+On the other hand, when we say "at least," it implies a lower bound, not an upper bound. If we say an algorithm's running time is at least O(n^2), we're suggesting that 
+the algorithm's growth rate is lower bounded by n^2, which is contradictory to the concept of Big O notation.
+
+In simpler terms, Big O notation is about an upper limit, saying "no worse than," while "at least" talks about a lower limit. Combining the two concepts in this context 
+creates confusion because they don't align logically. As a result, the statement "The running time of algorithm A is at least O(n^2)" doesn't make sense in the context 
+of algorithm analysis and Big O notation.

@@ -1,0 +1,3 @@
+no, even though all names in name colume is uniuq, they might not be the case always
+so it can not be part of primary key. unless the university has a rule that two instructions
+name can not be same

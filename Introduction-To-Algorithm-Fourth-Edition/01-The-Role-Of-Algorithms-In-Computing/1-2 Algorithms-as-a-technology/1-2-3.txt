@@ -1,0 +1,33 @@
+The smalles value of value of n has to be 15.(from program)
+
+-> from internet
+Trying n=20
+ gives
+10n=200
+and
+2n/2=210=1024.
+
+Since the rate of increase of n↦10n
+ is constant, while n↦2n/2
+ grows more and more quickly for larger n,
+ it follows that 10n<2n/2
+ whenever n≥20,
+ so we're looking for some n<20.
+
+Trying n=14
+ gives us
+10n=140
+and
+2n/2=128,
+so by similar reasoning, we need some n≥14
+.
+
+From there, the solution's fairly quickly found to be n=15
+.
+
+Note: n=15
+ is not the solution to the equation 100n2=2n
+, but it is the least n
+ for which 100n2<2n
+.
+

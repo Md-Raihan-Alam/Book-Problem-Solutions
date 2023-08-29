@@ -1,0 +1,6 @@
+One real-world example that requires sorting is organizing a list of student grades in a school. Suppose I have
+a dataset containing the grades of students in a class, and I need to sort the grades in ascending or descending
+order. Sorting the grades allow you to analyze and evaluate the performance of students more eefectively
+
+Assume I am a salesman that need to go certain places in a city and I want to minimize the time. So I can use to 
+find shortest distance of every two points to save my time

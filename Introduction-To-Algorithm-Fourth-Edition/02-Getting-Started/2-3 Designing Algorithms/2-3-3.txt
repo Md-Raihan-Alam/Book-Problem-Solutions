@@ -1,0 +1,30 @@
+Loop Invariant:
+The loop invariant for the while loop of lines 12-18 of the MERGE procedure can be stated as follows:
+
+At the beginning of each iteration of the loop, the subarray `A[p:k-1]` contains the `k - p` smallest elements from the subarrays `L[0:nL-1]` and `R[0:nR-1]` in sorted order.
+
+Explanation:
+- At the start of the loop, the subarrays `L[0:i]` and `R[0:j]` contain the smallest unmerged elements from their respective arrays, and the subarray `A[p:k-1]` contains the merged elements.
+- During each iteration of the loop, we compare the smallest elements of `L` and `R` (pointed to by `L[i]` and `R[j]` respectively). The smaller of these two elements is inserted into the merged subarray `A[p:k-1]`, incrementing `i` or `j` accordingly.
+- The merged subarray `A[p:k-1]` is then expanded to include the newly added element, ensuring that the invariant still holds for the next iteration.
+- This process continues until either `i` becomes equal to `nL` or `j` becomes equal to `nR`, meaning that all elements from either `L` or `R` have been merged.
+
+Using the Loop Invariant for Proof:
+
+1. Initialization: At the start of the first iteration, `i`, `j`, and `k` are all equal to `p`. Thus, the subarray `A[p:k-1]` is empty, and the loop invariant holds.
+
+2. Maintenance: During each iteration, the loop invariant is maintained. The smaller element between `L[i]` and `R[j]` is inserted into `A[k]`, and `k` is incremented. The merged subarray `A[p:k-1]` contains the `k - p` smallest elements in sorted order.
+
+3. Termination: The loop terminates when either `i` becomes equal to `nL` or `j` becomes equal to `nR`. This means that all elements from either `L` or `R` have been merged. At this point, the merged subarray `A[p:k-1]` contains all the elements from `L` and `R` in sorted order, which proves the correctness of the merging process.
+
+Using the Loop Invariant for Lines 20-23 and 24-27:
+
+The loop invariants for the subsequent while loops (lines 20-23 and 24-27) are quite similar:
+
+- For lines 20-23: At the beginning of each iteration, the subarray `A[k:r]` is empty, and the subarray `L[i:nL-1]` still contains the remaining elements from `L` in sorted order. The loop inserts these remaining elements into the merged subarray `A` while maintaining their sorted order.
+
+- For lines 24-27: At the beginning of each iteration, the subarray `A[k:r]` is empty, and the subarray `R[j:nR-1]` still contains the remaining elements from `R` in sorted order. The loop inserts these remaining elements into the merged subarray `A` while maintaining their sorted order.
+
+These subsequent loops help ensure that any remaining elements from either `L` or `R` are correctly merged into the final merged subarray `A`.
+
+In summary, the loop invariants ensure that the merging process maintains the order of elements from both `L` and `R`, ultimately resulting in a correctly merged and sorted subarray `A[p:r]`.

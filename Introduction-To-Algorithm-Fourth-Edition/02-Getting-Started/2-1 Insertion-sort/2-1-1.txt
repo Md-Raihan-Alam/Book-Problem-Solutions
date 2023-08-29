@@ -1,0 +1,15 @@
+Starting Array: [31, 41, 59, 26, 41, 58]
+
+1. **Pass 1**: The first element, 31, is already in its correct position since there's no element to the left of it. The sorted portion is [31].
+
+2. **Pass 2**: The second element, 41, needs to be inserted into the sorted portion. Since 41 is greater than 31, we leave 31 in place and insert 41 next to it. The sorted portion becomes [31, 41].
+
+3. **Pass 3**: The third element, 59, is greater than 41, so we move 41 to the right and insert 59 in its correct position. The sorted portion becomes [31, 41, 59].
+
+4. **Pass 4**: The fourth element, 26, needs to be inserted into the sorted portion. We move 59 to the right, then 41, and finally 31 to make space for 26. The sorted portion becomes [26, 31, 41, 59].
+
+5. **Pass 5**: The fifth element, 41, needs to be inserted into the sorted portion. We move 59 to the right and insert 41 in its correct position. The sorted portion becomes [26, 31, 41, 41, 59].
+
+6. **Pass 6**: The last element, 58, needs to be inserted into the sorted portion. We move 59 to the right and insert 58 in its correct position. The sorted portion becomes [26, 31, 41, 41, 58, 59].
+
+Final Sorted Array: [26, 31, 41, 41, 58, 59]

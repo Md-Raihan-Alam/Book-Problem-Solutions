@@ -1,0 +1,9 @@
+FUNCTION ADD_BINARY_INTEGERS(A,B,n):
+    Initialize carry as 0
+    Initialize an array C of size (n+1) with all zeros
+    FOR i = n-1 to 0:
+        total=A[i]+B[i]+carry
+        C[i+1]=total%2
+        carry=total/2
+    C[0]=carry
+    return C

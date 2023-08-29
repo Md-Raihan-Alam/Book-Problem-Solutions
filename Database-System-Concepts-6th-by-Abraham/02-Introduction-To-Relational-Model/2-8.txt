@@ -1,0 +1,2 @@
+a=>π(branch_name)(σ(branch_city = "Chicago")(branch))
+b=>π(customer_name)(σ(branch_name = "Downtown")(borrower ⋈ loan))
