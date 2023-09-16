@@ -1,0 +1,1 @@
+The Transmission of Ethernet LANs is typically 100 Mbps to tens of Gbps Internet, wherease servers may have 1 Gbps to 10 Gbps access

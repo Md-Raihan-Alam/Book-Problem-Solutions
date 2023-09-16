@@ -1,0 +1,10 @@
+Famous Wireless internet access todays are WIFI, Wide-Area-Wireless-Access. WiFi is a local wireless technology with limited coverage, ideal for connecting devices in homes, 
+offices, or public areas. Wide-Area Wireless Access technologies, like cellular networks, provide connectivity over much larger areas and are used for mobile communication and 
+internet access on a broader scale the are compare and contrast below:
+
+1.  WiFi is a local connection type, as ethernet, phone cables are, albeit without the physical cables.
+    Wide-Area-Wireless-Access on the other hand stands for ‘Wide Area Network’; and is often employed through the internet to interconnect various ‘local’ networks such that they can be interconnected.
+
+2.  Wifi Cover only small area while Wide-Area-Wireless-Access can cover huge areas.
+
+3.  User needs to be very close to wifi while users is fine as long as he is wihin a few tens of kilometers

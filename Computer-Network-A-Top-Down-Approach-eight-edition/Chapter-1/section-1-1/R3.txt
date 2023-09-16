@@ -1,0 +1,4 @@
+Standards are important for protocols because as there will be communication between two entities, there needs to be set specific rules to maintain proper communication,
+and standards help them. So standards are needed to set up proper protocols. , standards are important for protocols because they provide a common language and rules that 
+enable different entities to communicate effectively and reliably. This interoperability, consistency, scalability, security, and efficiency are essential for the functioning 
+and evolution of complex networked systems.

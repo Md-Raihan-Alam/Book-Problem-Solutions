@@ -1,0 +1,11 @@
+HFC stands for "Hybrid Fiber-Coaxial." It is a type of broadband communication network that combines optical fiber and coaxial cable infrastructure to deliver high-speed internet,
+television, and other services to homes and businesses. HFC networks are commonly used by cable TV and internet service providers (ISPs).
+
+HFC transmission rates can be shared among users. This means that multiple users in the same neighborhood or area share the available bandwidth. However, the available bandwidth 
+is typically quite high, so it can still provide high-speed internet access to multiple users simultaneously. The bandwidth is divided into channels, and each user's data is sent 
+and received on a specific channel.
+
+In HFC networks, collisions are not a typical concern on the downstream channels. Collisions are more relevant in shared Ethernet networks, such as in traditional Ethernet LANs.In 
+HFC networks, data is typically sent in a downstream direction from the headend (where the fiber connects to the coaxial network) to the users. The cable modem technology used in 
+HFC networks ensures that data is delivered individually to each subscriber's modem, and collisions are avoided. Collisions are more of a concern in the upstream direction, but 
+HFC networks employ protocols like DOCSIS (Data Over Cable Service Interface Specification) to manage upstream data transmissions without collisions.

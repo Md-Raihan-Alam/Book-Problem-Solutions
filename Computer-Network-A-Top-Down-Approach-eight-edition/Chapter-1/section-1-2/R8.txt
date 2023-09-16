@@ -1,0 +1,14 @@
+Some of the physical media that Ethernet can run over are:
+
+1.Twisted-Pair Copper Wire: It is the most least expensive and commonly used. Twisted-pair copper wire consists of two insulated copper wires, each 1mm thick and arranged in a
+                            regular spiral pattern. The wires are twisted together to reduce the electrical interferences from similar pairs clse by. Typically, a number of
+                            pairs are bundled together in a cable by wrapping the pairs in a protective shield. A wired pair constitutes a single communication link. Unshielded
+                            twisted pair(UTP) is commonly used for computer networks within a building. Data rates can be 10Mbps to 10Gbps
+
+2.Coaxical Cable: Like the twisted-pair copper wire, the coaxical cable consist of two copper conductors, but the two conductors are concentric rather than parallel. With this construction
+                  and special insulcation and shielding, the coaxical cable can achieve high datat transmission rates. It is commonly used in cable television system and it is
+                  shared medium.
+
+3. Fiber Optics: An optical fiber is a thin, flexible medium that conducts pulses of light, with each pulse representing a bit. A single opical fiber can support tremendouse bit rates,
+                 up to tens or even hundreds of gigabytes per second. They are immune to electromagnetice interfaces, have a very low attenuatio up to 100 kilometers and are very hard
+                 to tap.

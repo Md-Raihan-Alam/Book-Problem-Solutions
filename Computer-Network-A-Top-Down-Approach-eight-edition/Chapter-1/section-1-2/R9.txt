@@ -1,0 +1,3 @@
+DSL( Digital Subscriber Line ) is dedicated and typically range from 1 Mbps to 100 Mbps for downstream, usually range from 128 Kbps to 10 Mbps or more for upstream
+HFC( Hybrid Fiber Coax) is shared, the downstream can be consider from 40 Mbps to 1.2 Gbps and upstream can  be consider from 30 Mbps to 100 Mbps.
+FTTG( Fiber To The Home ) is dedicated and typically can handle gigabites per second range

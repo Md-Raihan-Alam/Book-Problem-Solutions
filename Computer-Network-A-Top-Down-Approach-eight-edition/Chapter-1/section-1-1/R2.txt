@@ -1,0 +1,5 @@
+A protocol defines the format and the order of messages exchanged between two or more communicating entites, as well as the actions taken on the transmission and/or receipt of a message 
+or other event.
+
+According to wikipedia, diplomatic protocol is the protocols specify the proper and generally
+accepted behavior in matters of state and diplomacy

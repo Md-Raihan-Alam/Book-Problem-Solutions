@@ -1,0 +1,10 @@
+Four Access Technology are:
+1. Ethernet
+2. WiFi
+3. Wide-Area Wireless Access: 5G
+4. Fiber Optics
+
+Ethernet -> can be used as enterprise access,
+WiFi -> can be used as home access
+5G -> can be used as wide-area wireless access
+Fiber Optics -> can be used as enterprise access and wide-area wireless access

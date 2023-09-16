@@ -1,0 +1,7 @@
+A host and end system are essentially same thing. Both can receive and send data. But A host is a device that connects to other devices in a network. Whereas an end system is a 
+device that is connected directly to the Internet
+
+There can be different type of end sytems, such as TVs, gaming console,home security system. watches, cars, traffic ocntrol systems and more.
+
+Web server can be not be consider an end system. Web servers are typically not considered end systems. They are specialized computers that are responsible for storing and 
+serving web content (such as websites) to clients (web browsers) over the internet.

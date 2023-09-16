@@ -1,0 +1,29 @@
+1. DSL (Digital Subscriber Line):
+   - Advertised Downstream Rate: Typically ranges from 1 Mbps to 100 Mbps or more, depending on the DSL technology.
+   - Advertised Upstream Rate: Usually ranges from 128 Kbps to 10 Mbps or more.
+   - Monthly Price: Prices vary based on the speed tier and the service provider.
+
+2. Cable Internet (HFC - Hybrid Fiber-Coaxial):
+   - Advertised Downstream Rate: Can range from 40 Mbps to 1.2 Gbps or more.
+   - Advertised Upstream Rate: Typically ranges from 30 Mbps to 100 Mbps or more.
+   - Monthly Price: Prices vary based on the speed tier and the service provider.
+
+3. FTTH (Fiber To The Home):
+   - Advertised Downstream Rate: Often ranges from 100 Mbps to 10 Gbps or more.
+   - Advertised Upstream Rate: Typically matches the downstream rate.
+   - Monthly Price: Prices can vary significantly depending on the speed tier and the service provider. Higher-speed plans tend to be more expensive.
+
+4. Fixed Wireless Internet:
+   - Advertised Downstream Rate: Varies depending on the wireless technology and the provider. It can range from 10 Mbps to 100 Mbps or more.
+   - Advertised Upstream Rate: Similarly, upstream rates vary and can range from 1 Mbps to 50 Mbps or more.
+   - Monthly Price: Prices depend on the provider and the plan selected.
+
+5. Satellite Internet:
+   - Advertised Downstream Rate: Typically ranges from 12 Mbps to 100 Mbps, depending on the satellite service.
+   - Advertised Upstream Rate: Generally has lower upstream rates compared to downstream.
+   - Monthly Price: Prices vary based on the provider and the service package.
+
+6. Mobile Broadband (4G/5G):
+   - Advertised Downstream Rate: Varies based on the cellular network and coverage area. Can range from a few Mbps to several hundred Mbps for 4G and even higher for 5G.
+   - Advertised Upstream Rate: Similar to downstream, but it may be lower.
+   - Monthly Price: Prices depend on the mobile carrier, data plan, and device used.
