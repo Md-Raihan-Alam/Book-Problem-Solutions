@@ -1,0 +1,4 @@
+Customer ISP's pay the provider ISP's to obtain internet interconnectivity. The amount a customer ISP pays a provider ISP reflects the amount of traffic the customer ISP exchange 
+with the provider.To reduce these the costs, a pair of nearby ISP's at the same level of hierarchy can peet, that is, they can directly connect their networks together so that all the traffic
+between them passes over the direct connection rather thanthrough upstream intermediaries.
+IXP(Internet Exhange Point) can eran money by providing the interpoint where a pair of ISP's can peer together

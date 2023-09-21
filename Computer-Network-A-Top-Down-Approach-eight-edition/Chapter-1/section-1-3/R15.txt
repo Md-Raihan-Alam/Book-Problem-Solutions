@@ -1,0 +1,9 @@
+Google is currently one of the leading example of content provider network. It is assumed for now, google has 19 major data centers with each data center having tens or hundreds of
+thousands of servers, Additionally, google also has smaller data centers, each iwth a few hundred servers; these smaller data centers are often located within IXP's. The google data
+centers are all interconnected via Google's private TCP/IP network, which spans the entire globe but is neverthelss separate from public Internet. Importantly, the google private network
+only carries traffic to/from google serers, Google private network attemps to "bypass" the upper ties of the Internet by peering(settlement free) with lower tier ISP's, either by directly
+connecting with them or by connecting with them at IXP's. HOwever, because many access IP's can still oly be reached by transiting thorugh tier-1 networks, the google network also connects to tire-1 ISP's and pays those
+ISP' fro the traffic it exchanges with them
+
+By creating its own network, a content provider not only reduces its payment to upper-tier SPs, but also has greater control of ow its services are ultimately dievered to end users.
+This is what motivates the content provider to create these networks.

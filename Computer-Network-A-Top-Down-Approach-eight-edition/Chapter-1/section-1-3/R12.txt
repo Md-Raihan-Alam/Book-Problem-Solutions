@@ -1,0 +1,8 @@
+The circuit-switch network has some advantages then packet-switch network, unlike packet switch network  circuit-switch if the following connection is possible, and check other routes
+if one is unavailable, and the connection won't be disturbed in any way. It is more suitable for telephone or mobile communication
+
+Packet switching has also some advantages than circuit-switch network, 1. it offers better sharing of transmission capacity than circui switching and 2. it is simpler, more  efficient and less
+costly to implement than circuit switching.
+
+TDM(Time-Division-Multiplexing) has some advantages over FDM(Frequency-Division Multiplexing) as in TDM time is divided into frames of fixed duration and each frame is divided into a fixed 
+number of time slots and in FDM the frequency spectrum of a link is divided , here TDM saves a fixed amount of duration which FDM do not, and the duration belong to sender and receiver end.

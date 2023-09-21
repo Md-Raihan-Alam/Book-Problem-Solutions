@@ -1,0 +1,10 @@
+a->When circuit switching is used, wo users can be supported, the sender and the reciever.
+b->Here link is 2Mbps, each users transmits continuously at 1 Mbps when tranmitting. so for the packet to go from sender to switch, it will be 2/1=2 and from switch to receiver
+   2/1=2, so as it takes only 1 Mbps so most for two users it will be 2*1=2 Mbps, so there won't be any delay but when the is three then it become 3*1=3 so there will be qeuing delay.
+c->Each user transmits only 20 percent of the time, which means they are active 20 percent of the time.The probability that a given user is transmitting is equal to the fraction 
+   of time they are active, which is 20 percent or 0.2.
+d->Each user transmits independently with a 20 percent probability of being active at any given time.To find the probability that all three users are transmitting simultaneously,
+   we multiply their individual probabilities of being active because the events are independent.Probability of all three users transmitting 
+   simultaneously = (0.2) * (0.2) * (0.2) = 0.008 or 0.8 percent. We have established that when three users transmit simultaneously, the link capacity is exceeded, and packets 
+   must wait in a queue.The fraction of time during which the queue grows is directly related to the probability that all three users are transmitting simultaneously, which we 
+   calculated as 0.008 or 0.8 percent.Therefore, the fraction of time during which the queue grows is 0.008 or 0.8 percent of the total time.

@@ -1,0 +1,2 @@
+There is exactly one packet switch between a sending host and receiving host are R1 and R2 and length is L, so total end-to-end will be 2*(L/R), as it takes the packet to arrive
+at switch in L/R1 and fromt swtich to receving host L/R2, so (L/R1)+(L/R2)=(2*(L/R))
