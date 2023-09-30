@@ -1,0 +1,11 @@
+Considering sending a packer from a source host to a destination host over a fixed route, there can be four types of delay componenets, they are described below:
+
+1. Processing Delay: The time required to examine the packet's header and determine where to direct the packet is part of the processing dealy.
+2. Queuing Delay: At the queue, the packet experinces a queuing delay as it waits to be transmitted onto the link. The length of the queuing delay of a specific packet  
+    will depend on the number of earlier-arriving packets that ar queued and waiting for transmission on the link. If the queue is empty and no other packet is currently being transmitted, then our packet's queing delay will be zero. On the other hand, if the traffic is heavy and many other packets are also waiting to be transmitted, the queuing delay will be long.
+3. Transmission Delay: Assuming that packets are transmitte in a first-come-first-served manner, as is common in packet-switched networks, our packet can be transmitted only
+   after all the packets that have arrived before it have been transmitted.
+4. Propagation Delay: Once a bit is pushed into the link, it needs to propagate to router B. The time required to proppagate from the beginning of the link to router B is the
+   propagation delay. The bit propagates at the propagation speed of the link. The propagation speed depends on the physical medium of the link and is in
+   the range of 2*10^8 m/s to 3*10^8 m/s which is equal to , or a little less than, by speed of light.
+   From above information we can say processing delay and queuing delay are variable and transmission delay and propagation delay are constant

@@ -1,0 +1,59 @@
+To demonstrate that a substitution proof fails with the assumption T(n) ≤ c * 2^n, where c > 0 is a constant, for the recurrence T(n) = 2T(n - 1) + 1, we can attempt the substitution proof using this assumption and show that it doesn't lead to a valid conclusion. After that, we'll adjust the assumption by subtracting a lower-order term to make the proof work.
+
+**1. Attempted Substitution with T(n) ≤ c * 2^n:**
+
+Assumption: We assume that T(k) ≤ c * 2^k for some positive constant c and all values of k less than n.
+
+Now, let's substitute this assumption into the original recurrence:
+
+T(n) = 2T(n - 1) + 1
+
+By the assumption, we have:
+
+T(n - 1) ≤ c * 2^(n - 1)
+
+Now, substitute this into the original recurrence:
+
+T(n) = 2T(n - 1) + 1
+≤ 2 * (c * 2^(n - 1)) + 1   (substituting T(n - 1))
+= 2c * 2^(n - 1) + 1
+
+Now, let's analyze this inequality:
+
+2c * 2^(n - 1) + 1 ≤ c * 2^n
+
+Divide both sides by 2:
+
+c * 2^(n - 1) + 0.5 ≤ c * 2^n
+
+This inequality does not hold for all values of n. It essentially says that a value slightly larger than half of c * 2^n is less than or equal to c * 2^n, which is not true for large values of n.
+
+Therefore, the assumption T(n) ≤ c * 2^n does not lead to a valid conclusion for this recurrence.
+
+**2. Adjusted Assumption by Subtracting a Lower-Order Term:**
+
+To make the substitution proof work, we can adjust our assumption by subtracting a lower-order term. Let's assume T(k) ≤ c * 2^k - d for some positive constants c and d, and for all values of k less than n.
+
+Now, let's substitute this adjusted assumption into the original recurrence:
+
+T(n) = 2T(n - 1) + 1
+
+By the adjusted assumption, we have:
+
+T(n - 1) ≤ c * 2^(n - 1) - d
+
+Now, substitute this into the original recurrence:
+
+T(n) = 2T(n - 1) + 1
+≤ 2 * (c * 2^(n - 1) - d) + 1   (substituting T(n - 1))
+= 2c * 2^(n - 1) - 2d + 1
+
+Now, let's analyze this inequality:
+
+2c * 2^(n - 1) - 2d + 1 ≤ c * 2^n
+
+Divide both sides by 2:
+
+c * 2^(n - 1) - d + 0.5 ≤ c * 2^n
+
+This inequality does hold for all values of n if c > 0 and d > 0. By adjusting the assumption to T(k) ≤ c * 2^k - d, we have successfully shown that T(n) = O(2^n) is a valid solution for the recurrence T(n) = 2T(n - 1) + 1.

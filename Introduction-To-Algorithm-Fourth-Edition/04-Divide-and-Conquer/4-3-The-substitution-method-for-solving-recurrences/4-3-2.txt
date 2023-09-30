@@ -1,0 +1,49 @@
+To demonstrate that a substitution proof with the assumption T(n) ≤ c * n^2 fails for the recurrence T(n) = 4T(n/2) + n, we can attempt the substitution proof using this assumption and show that it doesn't lead to a valid conclusion. After that, we'll adjust the assumption by subtracting a lower-order term to make the proof work.
+
+**1. Attempted Substitution with T(n) ≤ c * n^2:**
+
+Assumption: We assume that T(k) ≤ c * k^2 for some positive constant c and all values of k less than n.
+
+Now, let's substitute this assumption into the original recurrence:
+
+T(n) = 4T(n/2) + n
+
+By the assumption, we have:
+
+T(n/2) ≤ c * (n/2)^2 = c * (n^2/4)
+
+Now, substitute this into the original recurrence:
+
+T(n) = 4T(n/2) + n
+≤ 4 * (c * n^2/4) + n   (substituting T(n/2))
+= c * n^2 + n
+
+Now, let's analyze this inequality:
+
+c * n^2 + n ≤ c * n^2
+
+This is not true for all values of n, as the term "n" is always greater than or equal to zero. Therefore, the assumption T(n) ≤ c * n^2 does not lead to a valid conclusion for this recurrence.
+
+**2. Adjusted Assumption by Subtracting a Lower-Order Term:**
+
+To make the substitution proof work, we can adjust our assumption by subtracting a lower-order term. Let's assume T(k) ≤ c * k^2 - d * k for some positive constants c and d, and for all values of k less than n.
+
+Now, let's substitute this adjusted assumption into the original recurrence:
+
+T(n) = 4T(n/2) + n
+
+By the adjusted assumption, we have:
+
+T(n/2) ≤ c * (n/2)^2 - d * (n/2) = c * n^2/4 - d * n/2
+
+Now, substitute this into the original recurrence:
+
+T(n) = 4T(n/2) + n
+≤ 4 * (c * n^2/4 - d * n/2) + n   (substituting T(n/2))
+= c * n^2 - 2d * n + n
+
+Now, let's analyze this inequality:
+
+c * n^2 - 2d * n + n ≤ c * n^2
+
+This inequality holds for all values of n if c > 0 and d >= 1. Therefore, with the adjusted assumption T(k) ≤ c * k^2 - d * k, we have successfully shown that T(n) = Θ(n^2) is a valid solution for the recurrence T(n) = 4T(n/2) + n.

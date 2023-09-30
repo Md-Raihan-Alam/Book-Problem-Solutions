@@ -1,0 +1,39 @@
+To multiply two different n × n matrices using a Θ(n^α)-time algorithm for squaring n × n matrices, where α ≥ 2, you can apply the following approach, which leverages matrix squaring and recursive multiplication:
+
+1. Given two matrices A and B that are n × n in size, where you want to calculate the product AB.
+
+2. Check if n = 1 (the base case). If n = 1, simply multiply the single element in A by the single element in B and return the result as a 1 × 1 matrix.
+
+3. If n is greater than 1, do the following:
+
+   a. Divide each matrix A and B into four equal-sized n/2 × n/2 submatrices:
+
+      A = | A11  A12 |    B = | B11  B12 |
+          | A21  A22 |        | B21  B22 |
+
+   b. Use your Θ(n^α)-time algorithm to square each of these submatrices:
+
+      A11^2, A12^2, A21^2, A22^2, B11^2, B12^2, B21^2, B22^2
+
+   c. Recursively calculate the following products using the same algorithm:
+
+      P1 = A11 * (B12^2 - B22^2)
+      P2 = (A11 + A12) * B22^2
+      P3 = (A21 + A22) * B11^2
+      P4 = A22 * (B21^2 - B11^2)
+      P5 = (A11 + A22) * (B11^2 + B22^2)
+      P6 = (A12 - A22) * (B21^2 + B22^2)
+      P7 = (A11 - A21) * (B11^2 + B12^2)
+
+   d. Calculate the resulting n × n submatrices as follows:
+
+      C11 = P5 + P4 - P2 + P6
+      C12 = P1 + P2
+      C21 = P3 + P4
+      C22 = P5 + P1 - P3 - P7
+
+   e. Combine these four submatrices to form the final product C.
+
+4. The result is the product of matrices A and B, which you've computed in Θ(n^α) time.
+
+This approach uses a recursive divide-and-conquer technique, similar to Strassen's algorithm for matrix multiplication, but it leverages your Θ(n^α)-time matrix squaring algorithm. The key here is that the matrix squaring operation is used to calculate the products of submatrices, and the overall time complexity of this algorithm remains Θ(n^α), making it more efficient than the standard matrix multiplication algorithm, especially for larger values of α.

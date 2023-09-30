@@ -1,0 +1,29 @@
+If I modify the MATRIX-MULTIPLY-RECURSIVE algorithm to copy the appropriate elements of matrices A, B, and C into separate n/2 × n/2 submatrices and then copy the results back into the appropriate places in C, the recurrence relation for the running time indeed changes. In this case, I'm essentially avoiding the need to perform index calculations and directly working with submatrices, which can lead to a slightly different recurrence.
+
+The original recurrence was:
+```
+T(n) = 8T(n/2) + Θ(1)
+```
+
+With the modification, where I copy elements into submatrices and then copy results back, the recurrence becomes:
+```
+T(n) = 8T(n/2) + Θ(n^2)
+```
+
+The reason for the change is that the copying of elements into submatrices and back requires Θ(n^2) operations at each level of the recursion. This is because I need to iterate over n/2 × n/2 submatrices to copy elements.
+
+Now, I can solve this recurrence relation using the Master Theorem. In this case, I have:
+
+a = 8 (the number of subproblems)
+b = 2 (the factor by which the problem size is reduced)
+f(n) = Θ(n^2) (the cost of dividing and copying operations)
+
+Comparing f(n) to n^(log_b(a)), I have:
+
+n^(log_b(a)) = n^(log_2(8)) = n^3
+
+Since f(n) is polynomially larger than n^(log_b(a)), I fall into Case 1 of the Master Theorem. Therefore, the solution to the recurrence is:
+
+T(n) = Θ(n^3 * log(n))
+
+So, with the modification that involves copying elements into submatrices, the algorithm has a time complexity of Θ(n^3 * log(n)). This is a slightly higher time complexity compared to the original MATRIX-MULTIPLY-RECURSIVE algorithm with index calculations, which had a time complexity of Θ(n^3).

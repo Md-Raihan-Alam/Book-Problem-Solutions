@@ -1,0 +1,12 @@
+To multiply the complex numbers ((a + bi)) and ((c + di)) using only three multiplications of real numbers, you can use the following algorithm. This algorithm calculates both the real and imaginary components separately:
+
+Let P1 = a. (c + d)  // One multiplication
+Let P2 = (a + b). d  // One multiplication
+Let P3 = b. (c - d)  // One multiplication
+
+Now, calculate the real and imaginary components as follows:
+
+Real Component: (ac - bd = P1 - (P2 + P3))
+Imaginary Component: (ad + bc = P1 + (P2 - P3))
+
+Using this algorithm, you've achieved the multiplication of complex numbers using only three multiplications of real numbers. It leverages the properties of complex number multiplication and distributes the calculations among these three products to minimize the number of multiplications required.

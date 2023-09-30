@@ -1,0 +1,31 @@
+To determine which method yields the best asymptotic running time when used in a divide-and-conquer matrix multiplication algorithm, we need to analyze the growth rates of the three methods: the one for 68x68 matrices, the one for 70x70 matrices, and the one for 72x72 matrices. Specifically, we want to compare their time complexities and compare them with Strassen's algorithm, which has a time complexity of approximately O(n^log2(7)), which is roughly O(n^2.807).
+
+Let's analyze the given methods first:
+
+1. Multiplying 68x68 matrices using 132,464 multiplications.
+   - Time Complexity:
+    Here ,
+        132,464 = n^x    
+        log(132,464) = log(n^x)
+        log(132,464) = x * log(n)
+        x = log(132,464) / log(n)
+        x ≈ 2.951
+    O(132,464) ≈ O(n^2.951)
+   
+2. Multiplying 70x70 matrices using 143,640 multiplications.
+   - Time Complexity: O(143,640) ≈ O(n^2.951)(Same way)
+
+3. Multiplying 72x72 matrices using 155,424 multiplications.
+   - Time Complexity: O(155,424) ≈ O(n^2.951)(Same way)
+
+All three methods have time complexities that are approximately O(n^2.951), which is better than the traditional O(n^3) algorithm for matrix multiplication but not as good as Strassen's algorithm with its O(n^log2(7)) complexity.
+
+Now, let's compare these methods with Strassen's algorithm:
+
+- Strassen's Algorithm: O(n^log2(7)) ≈ O(n^2.807)
+
+Comparing the time complexities:
+
+- Strassen's algorithm has a better asymptotic running time than the methods for 68x68, 70x70, and 72x72 matrices. It achieves a time complexity closer to O(n^2.807), which is faster than the O(n^2.951) time complexities of the other methods.
+
+In summary, among the methods for multiplying 68x68, 70x70, and 72x72 matrices, none of them outperforms Strassen's algorithm in terms of asymptotic running time. Strassen's algorithm remains a more efficient choice when compared to these specific methods for the given matrix sizes.

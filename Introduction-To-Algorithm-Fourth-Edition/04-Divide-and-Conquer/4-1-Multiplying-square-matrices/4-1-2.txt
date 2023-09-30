@@ -1,0 +1,15 @@
+When multiplying a k n × n matrix by an n × k n matrix, where k ≥ 1, we can use the MATRIX-MULTIPLY-RECURSIVE algorithm as a subroutine. This operation essentially involves performing k matrix multiplications of n × n matrices and then summing up the results. The time complexity for this operation can be calculated as follows:
+
+1. Multiply the n × n matrix by the n × k n matrix: O(n^3).
+2. Repeat this multiplication k times: O(k * n^3).
+
+So, the overall time complexity for multiplying a k n × n matrix by an n × k n matrix is O(k * n^3).
+
+When multiplying an n × k n matrix by a k n × n matrix, we have a similar situation:
+
+1. Multiply the n × k n matrix by the k n × n matrix: O(n^3).
+2. Repeat this multiplication k times: O(k * n^3).
+
+Again, the overall time complexity for multiplying an n × k n matrix by a k n × n matrix is O(k * n^3).
+
+Both operations have the same time complexity of O(k * n^3), so neither one is asymptotically faster than the other. The time complexity depends on the value of k and the matrix dimensions (n × n and n × k n or n × k n and k n × n), but in terms of big O notation, they are equivalent.

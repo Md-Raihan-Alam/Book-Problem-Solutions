@@ -1,0 +1,6 @@
+a->for first link, the file transfer will be 500000 bytes per second, second link, file transfer will be  2000000 bytes per second , third link, file transfer will be 
+   1000000 bytes per second
+b->the file size is 4000000 bytes, so for first link time will be 8 sec, for second link time will be 2 sec, for third link time will be 4 sec, so total time will be 14 sec
+c-> here a->for first link, the file transfer will be 500000 bytes per second, second link, file transfer will be 100000 bytes per second bytes per second , third link, file transfer will be 
+    1000000 bytes per second and b->the file size is 4000000 bytes, so for first link time will be 8 sec, for second link time will be 40 sec, for third link time will be 4 sec, so 
+    total time will be 52 sec

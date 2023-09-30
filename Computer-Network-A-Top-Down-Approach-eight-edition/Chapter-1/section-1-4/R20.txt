@@ -1,0 +1,4 @@
+An end system creates packet by turning the file into data segments or break the file data into smaller units, these smaller units are known as
+packets. The packet contain an header which contain its destination mac address or ip address or location, when it arrives on router, it checks 
+the location in header and route it to correct location, as router give direction to final destination so it is analogous to driving from one city 
+to another and asking direction along the way.

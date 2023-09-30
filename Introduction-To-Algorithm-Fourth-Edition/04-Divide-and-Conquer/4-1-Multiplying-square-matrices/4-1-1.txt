@@ -1,0 +1,44 @@
+The MATRIX-MULTIPLY-RECURSIVE algorithm can be generalized to multiply n × n matrices where n is not necessarily a power of 2 by dividing the matrices into smaller submatrices recursively and applying the matrix multiplication operation. This approach is based on the Strassen algorithm for matrix multiplication.
+
+Here's a high-level description of the generalized algorithm:
+
+1. Divide the n × n matrices A, B, and C into four equal-sized submatrices, each of size n/2 × n/2.
+   ```
+   A = | A11  A12 |    B = | B11  B12 |    C = | C11  C12 |
+       | A21  A22 |        | B21  B22 |        | C21  C22 |
+   ```
+
+2. Recursively compute seven products:
+   ```
+   P1 = MATRIX-MULTIPLY-RECURSIVE(A11, B11)
+   P2 = MATRIX-MULTIPLY-RECURSIVE(A12, B21)
+   P3 = MATRIX-MULTIPLY-RECURSIVE(A11, B12)
+   P4 = MATRIX-MULTIPLY-RECURSIVE(A12, B22)
+   P5 = MATRIX-MULTIPLY-RECURSIVE(A22, B21)
+   P6 = MATRIX-MULTIPLY-RECURSIVE(A21, B11)
+   P7 = MATRIX-MULTIPLY-RECURSIVE(A22, B12)
+   ```
+
+3. Compute the resulting submatrices of C using the following equations:
+   ```
+   C11 = P1 + P2 - P3 + P6
+   C12 = P3 + P4
+   C21 = P5 + P6
+   C22 = P1 - P2 + P4 - P7
+   ```
+
+4. Combine the resulting submatrices to form the final result C.
+
+Now, let's analyze the recurrence relation for the running time. In each recursive call, we divide the problem into 7 subproblems of size n/2 × n/2. Therefore, the recurrence relation for the running time T(n) is given by:
+
+```
+T(n) = 7T(n/2) + O(n^2)
+```
+
+The O(n^2) term accounts for the addition and subtraction operations to combine the submatrices. According to the Master Theorem, this recurrence relation can be classified as:
+
+```
+T(n) = Θ(n^(log₂7))
+```
+
+Now, to prove that it runs in Θ(n^3) time in the worst case, we need to compare n^(log₂7) with n^3. In this case, n^(log₂7) grows slower than n^3 because 3 is greater than log₂7. Therefore, the dominant term in the running time is n^3, and the generalized MATRIX-MULTIPLY-RECURSIVE algorithm runs in Θ(n^3) time in the worst case, which is consistent with the traditional matrix multiplication algorithm's time complexity.

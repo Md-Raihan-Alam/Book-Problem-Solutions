@@ -1,0 +1,4 @@
+The rates , propagation delay and packet size for which sender finished transmitting before the first bit of the packet reaches the receiver is rate=100Mbps, 
+propagation delay=2.8*10^8 m/s, packet size=100Bytes, Length=10KM
+The rates , propagation delay and packet size for which the first bit of packet reaches the receiver before the sender finished transmitting is rate=1Mbps, 
+propagation delay=2.8*10^8 m/s, packet size=1KB, Length=10KM

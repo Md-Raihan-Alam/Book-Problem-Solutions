@@ -1,0 +1,4 @@
+We know, the propagation delay is d/s, where d is the distance between router A and router B and s is the propagation speed of the link.
+Here distance of the link is 2500 km =2500000m and propagation speed is 2.5*10^8, so the propagation delay is 2500000/2.5*10^8=0.00893
+the time it takes a packet of length L to propagate over a link of distance d, propagation speed s, and transmission rate R bps is d/s and the delay do not depends on packet length and
+transmission rate

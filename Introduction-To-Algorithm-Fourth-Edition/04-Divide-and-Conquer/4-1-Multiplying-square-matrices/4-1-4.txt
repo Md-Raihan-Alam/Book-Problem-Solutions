@@ -1,0 +1,75 @@
+Here's pseudocode for the MATRIX-ADD-RECURSIVE algorithm that sums two n × n matrices A and B using a divide-and-conquer approach:
+
+```python
+function MATRIX-ADD-RECURSIVE(A, B):
+    n = A.rows
+    
+    if n == 1:
+        C = [[A[0][0] + B[0][0]]]
+        return C
+    
+    C = Create a new n × n matrix
+    
+    # Divide A, B, and C into four n/2 × n/2 submatrices
+    A11, A12, A21, A22 = DivideMatrix(A)
+    B11, B12, B21, B22 = DivideMatrix(B)
+    C11, C12, C21, C22 = DivideMatrix(C)
+    
+    # Recursively add corresponding submatrices
+    C11 = MATRIX-ADD-RECURSIVE(A11, B11)
+    C12 = MATRIX-ADD-RECURSIVE(A12, B12)
+    C21 = MATRIX-ADD-RECURSIVE(A21, B21)
+    C22 = MATRIX-ADD-RECURSIVE(A22, B22)
+    
+    # Combine the results to form the final matrix C
+    CombineMatrix(C, C11, C12, C21, C22)
+    
+    return C
+
+function DivideMatrix(M):
+    n = M.rows / 2
+    M11 = M[0:n][0:n]
+    M12 = M[0:n][n:]
+    M21 = M[n:][0:n]
+    M22 = M[n:][n:]
+    return M11, M12, M21, M22
+
+function CombineMatrix(C, C11, C12, C21, C22):
+    n = C.rows / 2
+    C[0:n][0:n] = C11
+    C[0:n][n:] = C12
+    C[n:][0:n] = C21
+    C[n:][n:] = C22
+```
+
+Now, let's analyze the recurrence relation for the worst-case running time of MATRIX-ADD-RECURSIVE. In each recursive call, we divide the problem into four subproblems of size n/2 × n/2, and the partitioning step takes Θ(1) time. Therefore, the recurrence relation is as follows:
+
+```
+T(n) = 4T(n/2) + Θ(1)
+```
+
+Using the Master Theorem, we can solve this recurrence. In this case:
+
+a = 4 (the number of subproblems)
+b = 2 (the factor by which the problem size is reduced)
+f(n) = Θ(1) (the cost of partitioning)
+
+Comparing f(n) to n^(log_b(a)), we have:
+
+n^(log_b(a)) = n^(log_2(4)) = n^2
+
+Since f(n) is constant and doesn't grow with n, it's smaller than n^2. Therefore, we fall into Case 1 of the Master Theorem, and the solution to the recurrence is:
+
+```
+T(n) = Θ(n^2)
+```
+
+So, the worst-case running time of MATRIX-ADD-RECURSIVE is Θ(n^2), which is efficient.
+
+If I were to use Θ(n^2)-time copying to implement the partitioning instead of Θ(1)-time index calculations, the partitioning step would become the dominant factor in the runtime, and the time complexity would be significantly worse. In that case, the recurrence relation would be:
+
+```
+T(n) = 4T(n/2) + Θ(n^2)
+```
+
+Solving this recurrence using the Master Theorem would lead to a higher time complexity than Θ(n^2), making the algorithm less efficient compared to the original implementation.
