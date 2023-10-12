@@ -1,0 +1,55 @@
+Assumption: We'll assume that T(n) is Ω(n log n), which means there exists a positive constant c such that T(n) ≥ c * n log n for all n greater than or equal to some n[0].
+
+Now, let's verify this assumption using the recurrence relation:
+
+Recurrence Relation:
+T(n) = T(n/3) + T(2n/3) + Θ(n)
+
+We'll use the substitution method to show that T(n) ≥ c * n log n for all n ≥ n[0].
+
+1. Base Case: In this case, we can use a small enough base case where T(n) is directly bounded by c * n log n. This is typically established by setting n[0] sufficiently small, and the base case can be established by showing T(n) ≥ c * n log n for all n less than some small constant.
+
+2. Inductive Step: For n ≥ n[0], assume that T(k) ≥ c * k log k holds for all k < n. We'll now prove that T(n) ≥ c * n log n.
+
+T(n) = T(n/3) + T(2n/3) + Θ(n)
+
+Using our inductive hypothesis, we have:
+
+T(n/3) ≥ c * (n/3) log (n/3)
+T(2n/3) ≥ c * (2n/3) log (2n/3)
+
+Adding these inequalities and accounting for the Θ(n) term:
+
+T(n) ≥ c * (n/3) log (n/3) + c * (2n/3) log (2n/3) + Θ(n)
+
+T(n) ≥ c/3 * n log (n/3) + 2c/3 * n log (2n/3) + Θ(n)
+
+T(n) ≥ (c/3) * n * (log n - log 3) + (2c/3) * n * (log 2 + log (n/3)) + Θ(n)
+
+T(n) ≥ (c/3) * n * log n - (c/3) * n * log 3 + (2c/3) * n * (log 2 + log (n/3)) + Θ(n)
+
+Now, we'll simplify:
+
+T(n) ≥ (c/3) * n * log n - (c/3) * n * log 3 + (2c/3) * n * (log 2 + log (n/3)) + Θ(n)
+
+T(n) ≥ (c/3) * n * log n - (c/3) * n * log 3 + (2c/3) * n * (log 2 + log (n) - log 3) + Θ(n)
+
+T(n) ≥ (c/3) * n * log n - (c/3) * n * log 3 + (2c/3) * n * log 2 + (2c/3) * n * log (n) - (2c/3) * n * log 3 + Θ(n)
+
+Now, we'll further simplify:
+
+T(n) ≥ (c/3) * n * log n - (c/3) * n * log 3 + (2c/3) * n * log 2 + (2c/3) * n * log (n) - (2c/3) * n * log 3 + Θ(n)
+
+T(n) ≥ (c/3) * n * log n + (2c/3) * n * log 2 + (2c/3) * n * log (n) + Θ(n)
+
+Now, combining like terms:
+
+T(n) ≥ [(c/3) + (2c/3)] * n * log n + [(2c/3) * log 2 - (2c/3) * log 3 + 1] * n
+
+T(n) ≥ c * n * log n + [2c/3 * (log 2 - log 3 + 1)] * n
+
+T(n) ≥ c * n * log n + Θ(n)
+
+So, we have shown that if T(k) ≥ c * k * log k for all k < n, then T(n) ≥ c * n * log n, which means our assumption holds for n ≥ n[0].
+
+Since we have shown that T(n) is both Ω(n log n) and O(n log n), this implies that T(n) is Θ(n log n), meaning it is asymptotically equal to n log n.

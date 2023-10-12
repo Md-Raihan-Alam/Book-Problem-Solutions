@@ -1,0 +1,4 @@
+Reading data sequentially from a large file could be done with only one seek if the entire file were stored on consecutive disk blocks, Ensuring 
+availability of large numbers of consecutive free blocks is not easy, since files are created and deleted, resulting in fragmentation of the free blocks is not easy,
+since files are created and deleted, resulting in fragmentation of the free blocks on disk, Operating system's allocate blocks on large but fixed-sized
+sequential extents instead, and only on seek is required per extent.

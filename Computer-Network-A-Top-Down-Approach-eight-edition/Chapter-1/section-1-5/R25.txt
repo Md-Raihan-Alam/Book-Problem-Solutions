@@ -1,0 +1,9 @@
+A router processes data at both the network layer (Layer 3) and the link layer (Layer 2). At the network layer, it examines the destination IP address to make routing decisions. 
+At the link layer, it handles the framing and forwarding of data frames within the local network segment.
+
+A link layer switch primarily operates at the link layer (Layer 2). It deals with the MAC addresses in data frames and performs switching within the local network segment based on 
+MAC address tables.
+
+A host, such as a computer or a networked device, processes data at multiple layers, depending on its role and the tasks it performs. Typically, hosts operate at the application 
+layer (Layer 7) when running network applications (e.g., web browsers), the transport layer (Layer 4) when establishing connections, and the network layer (Layer 3) when sending 
+and receiving IP packets. The link layer (Layer 2) is responsible for handling data frames within the host's network interface.

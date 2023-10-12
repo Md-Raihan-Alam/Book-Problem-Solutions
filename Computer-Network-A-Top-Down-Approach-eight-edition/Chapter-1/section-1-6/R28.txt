@@ -1,0 +1,22 @@
+Trudy, in a position where she can intercept and manipulate the communication between Alice and Bob, has the potential to engage in various malicious activities, including:
+
+1. Eavesdropping: Trudy can simply intercept and monitor the communication between Alice and Bob to gather sensitive information or secrets.
+
+2. Data Tampering: Trudy can alter the content of the packets being sent between Alice and Bob. For example, she can modify a message to insert malicious code or misinformation.
+
+3. Packet Dropping: Trudy can selectively drop packets from Alice to Bob or vice versa, disrupting the communication and causing data loss.
+
+4. Replay Attacks: Trudy can capture legitimate packets and replay them at a later time. This can lead to various security issues, especially if the communication involves authentication tokens or session cookies.
+
+5. Man-in-the-Middle (MitM) Attacks: Trudy can position herself between Alice and Bob and intercept all their traffic. She can then impersonate Alice to Bob and vice versa, allowing her to relay messages and potentially steal sensitive data.
+
+6. Session Hijacking: Trudy can capture session tokens or cookies exchanged between Alice and Bob during login sessions. With these tokens, she can impersonate one of them and gain unauthorized access to their accounts.
+
+7. DNS Spoofing: Trudy can modify DNS responses to redirect Alice or Bob to malicious websites, potentially leading to phishing attacks or the installation of malware.
+
+8. Traffic Analysis: Even without tampering with the content, Trudy can analyze the traffic patterns to gather information about Alice and Bob's behavior, such as their browsing habits or the types of services they are using.
+
+9. Denial of Service (DoS) Attacks: Trudy can flood Alice or Bob with a massive amount of traffic, causing their systems to become overwhelmed and unavailable to legitimate users.
+
+10. Traffic Injection: Trudy can inject malicious code or malware into the communication stream, potentially compromising the security of Alice and Bob's devices.
+

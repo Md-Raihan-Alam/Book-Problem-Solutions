@@ -1,0 +1,1 @@
+self-replicating malware is when itinfect one host, it try to seek entry from that host to other host over the internet

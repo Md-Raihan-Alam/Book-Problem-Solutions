@@ -1,0 +1,16 @@
+In terms of Cost-
+    Using fewer disks in a RAID 5 array reduces the overall cost of the storage solution.
+    Using more disks increaes the cost of the RAID 5 array due to the higher number of drives required.
+In terms of Reliability-
+    With fewer dists, the RAID 5 array has fewer components that could potentially fail.
+    More disks mean a higher likelihood of drive failures within the array as the risk of enountering multiple 
+    drive failers increases as the number of disks grows, potentially compromising data reliability.
+In terms of Performance During Failure:
+    with fewer disks in the event of a drive failure, RAID 5 performance may degrade to some extent, but the 
+    impact is relatively lower with fewer disks. Rebuild times are shorter, minimizing the exposure to a degraded state.
+    With more disks, the impact of a single drive failure on RAID 5 performance is generally more significant. Rebuild 
+    times can be longer, increasing the risk of a second drive failure during the rebuild (a scenario known as the "RAID 5 write hole").
+In terms of Performance During Rebuild:
+    with fewer disks,Rebuilds in smaller RAID 5 arrays tend to be faster, as there is less data to reconstruct. This means that the array can 
+    return to full redundancy and optimal performance more quickly. With more disks, larger RAID 5 arrays may experience longer rebuild times 
+    due to the greater amount of data that needs to be reconstructed. This extended rebuild period can expose the array to potential vulnerabilities for a more extended duration.

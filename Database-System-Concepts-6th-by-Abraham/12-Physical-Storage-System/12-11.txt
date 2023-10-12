@@ -1,0 +1,9 @@
+Among the common RAID levels, RAID 1 typically yields the least amount of interference between the rebuild process and ongoing disk accesses. This is because RAID 1, also known as mirroring, involves the simplest and most straightforward data redundancy mechanism compared to other RAID levels like RAID 5 or RAID 6. Here's why RAID 1 is less intrusive during rebuilds:
+
+1. Full Redundancy: In RAID 1, every disk drive is fully mirrored, meaning that every piece of data is duplicated on two or more disks. If one disk fails, there's an identical copy of the data on another disk. This redundancy makes it easier to initiate a rebuild because all the data needed for reconstruction is readily available on the mirror drive.
+
+2. Parallel Rebuilds: Since every disk has a direct mirror, the rebuild process can be executed in parallel with ongoing disk accesses. When a failed disk is replaced, the system can initiate the rebuild operation without interrupting normal read or write operations because it doesn't need to read data from multiple disks or perform complex parity calculations.
+
+3. Low Computational Overhead: Rebuilding a failed disk in RAID 1 is a straightforward process of copying data from the healthy mirror drive to the replacement drive. It doesn't involve complex XOR calculations or parity updates, as seen in RAID 5 and RAID 6, which require more computational resources and can impact performance.
+
+4. Minimal Impact on Read Performance: Read performance during the rebuild process is typically not significantly affected. Since the mirror drive contains an identical copy of the data, read requests can be satisfied from either drive without performance degradation.

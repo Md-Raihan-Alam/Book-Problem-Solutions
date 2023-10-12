@@ -1,0 +1,31 @@
+Recursion Tree:
+
+Let's construct a basic sketch of the recursion tree for this recurrence. The tree structure for each level of recursion looks like this:
+
+```
+               T(n)
+               / \
+        T(αn)  T((1-α)n)
+          /        \
+    T(α^2*n)  T(α(1-α)*n)
+      /           /       \
+ T(α^3*n)   T(α^2(1-α)*n) ...
+```
+
+This tree continues until we reach the base case.
+
+Guess for the Solution:
+
+Now, let's make an educated guess for the solution. The recurrence can be seen as a binary tree where each level of the tree has two branches, one corresponding to T(αn) and the other to T((1-α)n). 
+
+The total amount of work at each level is Θ(n), and since the branching factor is 2, the total work at each level can be considered to be a constant multiple of n. This suggests that the work at each level is bounded by some constant times n, say c * n.
+
+Now, if we sum the work at each level, the total work would be c * n + c * n + c * n + ... (log_n times). This can be expressed as c * log_b(n) * n, where b is the branching factor (2 in this case). 
+
+In this context, α and (1-α) represent the fractions of the problem size that are split into subproblems. We know that 0 < α < 1, which means both α and (1-α) are positive constants.
+
+Therefore, we can make a good guess that the solution to the recurrence T(n) = T(αn) + T((1-α)n) + Θ(n) is T(n) = Θ(n * log_b(n)), where b is the branching factor, which is 2.
+
+This is a common form of the solution for divide-and-conquer algorithms, and it aligns with the intuition that each level of the recursion processes a constant fraction of the problem size n.
+
+However, to provide a more rigorous proof and find the exact constant factors, you may need to use the Master Theorem or another mathematical analysis technique, depending on the specific values of α and the structure of the recurrence.

@@ -1,0 +1,11 @@
+Here are five tasks a layer can perform:
+
+1. Data encapsulation: each layer adds its own header to the data it receives from the layer above. The process is called encapsulation.
+2. Error Detection and Correction: Layers are responsible fro detecting and , in some cases, correcting errors that may occur during data transmission
+3. Addressing and Routing: Layers are responsible for adding addressing information to the data packets which helps routers and switces determine how to forward the packest to their destination.
+4. Flow Control: Flow control mechanism help regulate the flow of data between sender and receiver to prevent congestion or data loss.
+5. Data segmentation and Reassembly:  Large data streams are divided into smaller segments for transmission and reassembled at the destination.
+
+Yes, it might be possible for one layer to perform toher layers tasks:
+1. Error Detection:Both the data link layer and transport layer may perform error detection, but they do so at different levels. The data link layer often focuses on detecting errors within a single link (e.g., Ethernet frame), while the transport layer focuses on end-to-end error detection across multiple hops.
+2. Addressing: Addressing is performed at various layers. Data link layers use MAC addresses, network layers use IP addresses, and transport layers use port numbers

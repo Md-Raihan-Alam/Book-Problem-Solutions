@@ -1,0 +1,1 @@
+The query selects those values of p.a1 that are equal to some value of r1.a1 or r2.a2 if and only if both r1 and r2 are non-empty, If one or both of r1 and r2 are empty , the Cartesian product of p, r1 and r2 is empty, hence the resul of the query is empty. If p itself is mepty, the result is empty

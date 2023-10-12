@@ -1,0 +1,30 @@
+To prove that the recurrence relation L(n) has an asymptotic lower bound of Ω(n) using the substitution method, we'll assume that L(n) is bounded from below by a constant times n. We'll then demonstrate that this assumption holds.
+
+Assumption: Let's assume that L(n) is Ω(n), which means there exists a positive constant c such that L(n) ≥ c * n for all n greater than or equal to some n[0].
+
+Now, let's verify this assumption using the recurrence relation:
+
+Recurrence Relation:
+L(n) = 1 if n < n[0] (base case)
+L(n) = L(n/3) + L(2n/3) if n ≥ n[0]
+
+We will use the substitution method to show that L(n) ≥ c * n for all n ≥ n[0].
+
+1. Base Case: If n < n[0], we know L(n) = 1. Since 1 ≥ 1 * n for all n, the base case holds.
+
+2. Inductive Step: For n ≥ n[0], assume that L(k) ≥ c * k holds for all k < n. We will prove that L(n) ≥ c * n.
+
+L(n) = L(n/3) + L(2n/3)
+
+By our inductive hypothesis, we know that L(n/3) ≥ c * (n/3) and L(2n/3) ≥ c * (2n/3) since n/3 < n and 2n/3 < n. Therefore:
+
+L(n) = L(n/3) + L(2n/3) ≥ c * (n/3) + c * (2n/3)
+L(n) = (c/3 + 2c/3) * n
+L(n) = (3c/3) * n
+L(n) = c * n
+
+So, we've shown that if L(k) ≥ c * k for all k < n, then L(n) ≥ c * n, which means our assumption holds for n ≥ n[0].
+
+Since we have shown that L(n) is bounded from below by c * n for all n ≥ n[0], we can conclude that L(n) is Ω(n).
+
+Finally, because we have shown that L(n) is both Ω(n) and O(n) (previously), this implies that L(n) is Θ(n), meaning it is asymptotically equal to n.

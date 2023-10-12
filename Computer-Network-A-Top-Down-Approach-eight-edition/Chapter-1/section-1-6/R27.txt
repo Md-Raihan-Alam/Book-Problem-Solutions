@@ -1,0 +1,8 @@
+botnet can be created by trying to infect a large number of computers with malware. This maleware can be created by using various means like email attachments, malicious websites etc, 
+once it take it over, it try to infect other computer .
+
+botnet can be used for DDoS attack like,
+1. Vulnerability attack: This involves sending a few well-creafted meesages to a velnerable application oroperating system running on a targetd host. If the right sequence of packet is set to a vulnearable application or operating system,
+the service can stop or worse, the host can crash.
+2. Bandwidth flooding: The attacker sends a deluge of packets to the target host - so many packets that target'saccess link becomes clogged, preventing ligitimate packest from reaching the server.
+3. Connectiion flooding: The atacker establish a large number of half or full open TCP connection at the target host. THe host can become so bogged own with these bogus connections that it stops accepting legitimate connections.

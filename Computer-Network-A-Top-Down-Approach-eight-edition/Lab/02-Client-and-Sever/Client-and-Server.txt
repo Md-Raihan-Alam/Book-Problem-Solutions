@@ -1,0 +1,19 @@
+1. in end devices, select the server and pc and add to topology
+
+2. click server, and I get options, I can see the physcial, same for (click)pc
+
+3. in connection, select  crossover cable, connect with pc,select FastEthernet0, and then connect with server, select FastEthernet0
+
+4. the interface is green, if I chose wrong then it will be red
+
+5. clicking on pc, going to config option, selecting FastEthernet0, I can see the mac address. (Bonus, I can see the mac address in my laptop, by going to control panel, going to network and internet, going to network and sharing centre, going to to change adpater setting , click a active adapter, click 'Details', and you get the mac address), same for server, now in FastThernet0 I can change mac address, for server I entered = 0001.2222.2222 and for pc I entered = 0001.1111.1111.
+
+6. Go to FasterEnthernet0 option of config option by clicking on pc, I set the ip address of server = 10.1.1.1 and subnet mask =255.255.255.0 , now if I go to Desktop option and click on  Command Prompt and type ipconfig O get to see mac address, ip adress, subet mask, same for server, I set ip address=10.1.1.2 and subnet mask =255.255.255.0(Bonus, I can see the IP address of active adapter in my laptop by typing 'ipconfig' in cmd in laptop)
+
+7. Now I can use the ping to verify the connectivity of the server. now if I click on pc and go to Desktop option and click on  Command Prompt and type 10.1.1.2 then I can see result of connectivity , same way for server
+
+8.Now click on Services option, I get to see many services, such as HTTP, DNS, now if I set on for HTTP , and go to pc Desktop and click Web browser, and enter http://10.1.1.2, I get to see the server host site. If i turn off the http and turn on https then http://10.1.1.2 will return request timeout but https://10.1.1.2 will show site, turning on http wil turn the site on (Bonus, Port 443 is the port number used for https)
+
+9. Now click on simulation mode, refresh the site, and see a packet is sent from client to server, click on packet you get to see PDU information, here OSI model, you can see that in Layer 2(Ethernet II Header) of Out Layers  mac address from pc to server(0001.1111.1111>0001.2222.2222) and in Layer 3(IP Header) of Ip address of client(src) and server(Dest), here(Src: IP=10.1.1.1 belong to pc and Dest: IP=10.1.1.2 belong to server), in layer 4(TCP) of out layer I can see Dst Port:80 the port number server is listening and 1038 the one client(PC) is listening. In Outbound PDU Details, look around or more detail, you can see , look around you will get same information
+
+10. now click on next button for server and I will get to see packet being sent to server from pc and server to pc

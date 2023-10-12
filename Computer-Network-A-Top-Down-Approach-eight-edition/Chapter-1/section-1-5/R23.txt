@@ -1,0 +1,21 @@
+The Five layers in the Internet protocol stack is
+1. Application Layer.
+2. Transport Layer.
+3. Network Layer.
+4. Link Layer.
+5. Physcial Layer.
+
+Application Layer: The application layer is where the network applications and their application-layer protocol reside. The Internet's application layer include many protocols, such as
+                    HTTP protocol, and FTP. An application-layer protocl is distributed over multiple end systems, with application in one end system using protocl to exchange packets of information with 
+                    applciation in another end system. The packet is refer as message.
+Transport Layer: The Internet's transport layer transport application-layer message between applciation endpoints. There are two internet transport protocol, TCP and UDP. TCP provides a connection-oriented
+                 service to its application. This service includes guaranteed delivery of application-layer messages to the destination and flow control. TCP also breaks long meesages into shorter segmetns and
+                 provides a congestion-control mechanism, so that a source throttles its transmission rate when the network is congested. The UDP protocl provides a connectionless service to its application. This is a no-frills 
+                 sevice that provides no reliability, no flow control and no congestion control. Thes packets in transport layer is refer as segment
+Network Layer:  The Internet's nework layer is responsible fro moving network-layers packets known as datagrams from one host to another. The Internet transport -layer protocol in a source host passes a transport -layer segmetn and a destination address to 
+                the network layers. The network layer provide the service to delivering the segment to the transport layer in the destination host. The Internet's network layer includes the celebrated IP protocol, it alos contains routing protocols that
+                determine the routes that datagrams take between sources and destinations.
+Link Layer: The Internet Network layer routes a datagram grhough a series of routers between the source and destination. To move a packet from one node(host or router) to the next node in the route, the network route relies on services of link layer. In paritcular,
+            ,at each node, the network layer passess the datagram down to the link layer, which delivers the datagram to next node alogn the layer, At the next node, the link layer passes the datagramp up to the network layer.
+Physical Layer: while the job of the link layer is to move entire frames from one network element to an adjacent network element, the job of the physical layer is to move the indivdual bits within the the frame fron one node to the next. The protocols in this layer
+                are again link depended and further depend on the actual  transmission medium of the link.

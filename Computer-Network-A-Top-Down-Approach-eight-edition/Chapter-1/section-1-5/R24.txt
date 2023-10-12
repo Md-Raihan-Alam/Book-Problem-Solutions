@@ -1,0 +1,7 @@
+Application-layer message: An application-layer protocl is distributed over multiplle end system, witht the application in one end system using the protocol to exchange packets of 
+                            information with application in aonother end system. the packet of information at the applciation layer is refer as applicaiton-layer message.
+Transport-layer segment: When the packets of information reached the transport layer, the transport layer takes the message and appends additional information that will be sued by the receiver
+                         side tranport layer. The application-layer message and the transport layer header information together constitute the transport layer segment.
+Network-layer datagram: When the transport-layer segment reached network layer, the network layer then adds network-layer header information such as source and destination end system addresses,
+                        crating a network-layer datagram.
+Link-layer frame: From network layer ,the datagram then reached to link layer where link layer will add its own header information and create a link layer fram.
