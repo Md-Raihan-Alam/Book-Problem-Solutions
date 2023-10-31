@@ -1,0 +1,13 @@
+If I want to do a transaction from a remote client to a server as fast as possible. I would use TCP rather than UDP.
+
+TCP service model includes a connection-oriented service and a reliable data transfer. TCP has the client and server exchange transport-layer control
+information with each other before the application-level messages begin to flow. This so-called handshaking procedure alerts the client adn server, allowing
+them to prepare for an onslaught of packets. After the handshaking phase, a TCP connection is said to exist between the sockets of the two processes.
+TCP also provide reliable data transferservice. The communicating processes can rely on TCP to dliver all data sent without error and in the proper order. TCP 
+aslo includes a congestion-control mechanism, a service for the general welfare of the Internet rather than for the direct beneft of the communicating process.
+TCP also provide TLS(Transport Layer Security) which encrypt the packet that is being send so security and privacy is protected.
+
+UDP is a no-frills, lightweight transport protoclo, providing minimal services. UDP is connectionless, so there is no handshaking efore the two process start to communicate.
+UDP provides an unreliable data transfer service. UDP provides no guarantee that the message will ever reach the receiving proces and it has no security to encrypt the package.
+
+So I will use TCP

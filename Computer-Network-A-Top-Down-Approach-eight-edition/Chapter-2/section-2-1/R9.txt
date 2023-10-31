@@ -1,0 +1,4 @@
+TLS( Transport Layer Security) is not a third internet transport protocol, on the same level as TCP and UDP, but instead is an enchacement of TCP, iwth the enhancements being implemented in the application layer.
+So, it operates at application layer not at transport layer.
+
+If te application developer wants TCP to be enchances with TLS, then it just needs to include TLS code( existing, highly optimized libraries and classes) in both the client and server sides of the application.

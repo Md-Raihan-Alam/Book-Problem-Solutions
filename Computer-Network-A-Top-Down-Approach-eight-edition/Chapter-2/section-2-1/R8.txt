@@ -1,0 +1,9 @@
+Four broad classes that a transport protocol can provide are reliable data transfer, throughput, timing and security.
+
+1. Reliable data transfer: Packets can get lost within a coputer network. For example, a packet can overflow a buffer in a router , or can be discarded by a host or router after having some of tis bits corrupter.
+                           So we need a protocol that can provide a guaranteed data delivery service, it is said to provide reliable data transfer, TCP provide it but UDP does not.
+2. Throughput: Throughput, by which mean, in the context of a communication session between two processes alogn a network path, is the rate at which the sending process can deliver bits to the receiving process. 
+                as there will be many session that will be suign same network path, the available throughput can fluctuate with time, So we need a service so that application could request a guaranteed througput of 
+                r bits/sec. and there are such services and application that have throughput requirement , which are said to be bandwidth-sensitiveapplications. TCP and UDP both provides it.
+3. Timing: A transport-layer protocol can also provide timing guarantees, as some application might be time sensitive and some might be less time sensitive. TCP and UDP both provides it.
+4. Security: A transport protocol can provide an application with one or more security services, so that the packets can be encrypted, TCP provide TLS for it but UDP does not provide any.

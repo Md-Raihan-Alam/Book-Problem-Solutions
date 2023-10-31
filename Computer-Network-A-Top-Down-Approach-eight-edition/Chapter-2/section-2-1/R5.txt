@@ -1,0 +1,5 @@
+IP address is used by a process running on one host to identify a process running on another host.
+
+IP adddress is a 32-bit quantity that we can think of as uniquey identifying the host. In addition to knowing the address of the hsot to which a message is destined, the sending process must also identify
+the receiving process (more specifically, the receiving socket) running in the host. This information is needed because in general a host could be running many network
+applicatios. A destination port number serves this purpose.

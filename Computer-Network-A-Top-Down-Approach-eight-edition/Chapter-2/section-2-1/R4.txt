@@ -1,0 +1,4 @@
+"There is no notion of client and server sides of a communication session" - I agree with this statement
+
+In a P2P  architecture, there is minimal (or no) reliance on dedicated servers in data centers, instead the application exploits direct communication between pairs of intermittently
+connected hosts, called peers.

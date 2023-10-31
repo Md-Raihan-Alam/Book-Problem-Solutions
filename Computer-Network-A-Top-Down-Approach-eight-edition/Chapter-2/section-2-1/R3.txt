@@ -1,0 +1,2 @@
+:In the context of a communication session between a pair of processes, the process that initiates the communication (that is, initially contacts the other process at the beginning of 
+the session) is labeled as the client. The process that waits to be contacted to begin the session is the server.
