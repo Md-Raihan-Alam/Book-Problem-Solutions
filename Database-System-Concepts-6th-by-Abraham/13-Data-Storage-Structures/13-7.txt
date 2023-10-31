@@ -1,0 +1,8 @@
+a=>MostRecentOrders = π(CustomerID, OrderID, OrderDate)(σ(RowNumber = 1)(γ(CustomerID, MAX(OrderDate) as MaxDate, ROW_NUMBER() OVER (PARTITION BY CustomerID ORDER BY OrderDate DESC) as RowNumber)(Orders)))
+
+b=>OldSystemEvents = σ(EventDate < '2023-01-01')(SystemEventLog)
+
+
+Query-Processing Strategy:
+
+In a database management system that prioritizes LRU, you would ensure that older data remains in the cache, and when new data is accessed, it may lead to the eviction of older, less-recently used data. This strategy ensures that the cache contains older data for queries that require historical information.

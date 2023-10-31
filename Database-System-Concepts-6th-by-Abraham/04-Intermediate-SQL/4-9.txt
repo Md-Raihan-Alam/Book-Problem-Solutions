@@ -1,0 +1,1 @@
+The tuples of all employes of the manager, at all levels get deleted as well! this happens in a series of steps. The initial deletion will  trigger deletion of all the uples corresponding todirect employees of the manager

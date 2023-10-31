@@ -1,0 +1,10 @@
+A max heap is a specialized tree-based data structure that satisfies the heap property. In a max heap, for any given node I, the value of I is greater than or equal to the values of its children.
+
+Let's check if your array {33,19,20,15,13,10,2,13,16,12} satisfies this property:
+
+- 33 (children 19, 20) - OK
+- 19 (children 15, 13) - OK
+- 20 (children 10, 2) - OK
+- 15 (children 13, 16) - Not OK because 16 > 15
+- 13 (children 12) - OK
+So no, this array does not represent a max heap because it doesn't satisfy the heap property for all elements. For example, at index 3 (0-indexed), the parent node is 15 and it has a child node with value 16 which is greater than 15. Therefore, the heap property is violated.

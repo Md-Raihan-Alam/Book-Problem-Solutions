@@ -1,0 +1,16 @@
+1. First take 3650-24PS from switch , PC(PC0) from end device, Laptop(Laptop0) from end devices, now take Copper Staight-Through from connections and connect PC as FastEthernet0 and connect with switch 1/0/1 then take another from connection and connect with switch as 1/0/2 and connect with Laptop as FastEthernet0 and topology completed
+
+2. Now go to PC0 Config by clicking on it, and click FastEthernet0 and set up IP4 address as 10.1.1.1 and subnet mask as 255.255.255.0, I can see the mac address of pc there. I can see the details of IP,Subnet and MAC typing 'ipconfig' or 'ipconfig /all' in command prompt in desktop
+
+3. Now go to Laptop0 Config by clicking on it, and click FastEthernet0 and set up IP4 address as 10.1.1.2 and subnet mask as 255.255.255.0, I can see the mac address of pc there. I can see the details of IP,Subnet and MAC typing 'ipconfig' or 'ipconfig /all' in command prompt in desktop
+
+4. See in PC0, Laptop0 command prompt 'ipconfig /all' and see for PC0 the physcial address(mac address) start with 0001 and for laptop it is 00D0 , the first half of address is vendor code, and second half is  unique identifier. but If I type 'arp -a' , see that no arp entries. Arp is used to find the mac adress of another device in the network, basically a broadcast who has this ip address and target device will sent back by with its mac address
+
+5. Now ping the PC0 using 'ping 10.1.1.1' in laptop and connection will be establish now do 'arp -a' I will get the mac address of the pc, so pc and laptop has learn the mac address of each other, I can check in pc by typing 'arp -a'
+
+6. Now go to CLI in switch by clicking on it, first return if needed then type 'en' to english and type 'show mac address-table' , I can see the switch has learn both devices mac address and other details
+
+7. mac address consist of 6 hexadecimal values for vendor code and 6 hexadecimal for unique identifier and a hex value is 4 binary bits, so total 48 binary number is mac address. I can test by changing mac address of devies and see that arp is empty so, ping again and check arp -a , I can see that table in switch is updated and contain new mac address with old one, 
+
+so I can see mac address is made of hexa decimal, hexadecimal is also used for ip6 and DHCPv6 and bluetooth physical
+

@@ -1,0 +1,11 @@
+a=>
+Optimal Resource Management: By leaving most of the main memory available for file system buffering to the operating system's buffer manager, PostgreSQL can avoid resource contention. This approach allows PostgreSQL to focus on managing its own database buffers efficiently, while the operating system can use the remaining memory for file system caching.
+
+Adaptability: The operating system's buffer manager is typically designed to be adaptive and efficient, ensuring that file system operations (reading/writing files) perform well. It can adapt to the changing demands of multiple applications running on the same system.
+
+Resource Sharing: This approach promotes fair sharing of system resources among various applications. By not monopolizing the entire main memory, PostgreSQL cooperates with other applications running on the same server, preventing resource conflicts.
+
+Simplified Configuration: Administrators and database users don't need to fine-tune PostgreSQL's buffer configuration as extensively because the database relies on the operating system's buffer management, which is often optimized for general use.
+
+b=>
+Limited Control: PostgreSQL has limited control over the management of the main memory allocated to file system buffering. It cannot make fine-grained decisions about how memory is used for caching database data. This limitation can affect database performance in scenarios where more precise control is required.

@@ -1,0 +1,9 @@
+No, an array that is in sorted order is not necessarily a min-heap. While a sorted array does share some similarities with a min-heap, they are not the same.
+
+A min-heap is a complete binary tree in which the value of each node is less than or equal to the values of its children, and it is structured in a specific way to satisfy the heap property. The minimum element is at the root, and smaller elements are found further down the tree.
+
+A sorted array, on the other hand, is simply an array in which the elements are arranged in a specific order, such as ascending or descending order. The sorted array does not necessarily have the complete binary tree structure or the heap property of a min-heap.
+
+To convert a sorted array into a min-heap, you would need to use a specific algorithm, such as the "heapify" operation, which would rearrange the elements in the array to satisfy the min-heap property. Simply having a sorted array does not guarantee that it's a min-heap.
+
+take this as example min heap={4 5 11 10 7 13 }, sorted array ={4 5 7 10 11 13}

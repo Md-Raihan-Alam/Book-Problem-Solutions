@@ -1,0 +1,3 @@
+There are many reason - some are given below:
+1. One might wish to allow a user only to append new information without alerting old information.
+2. One might wish to allow a user to access a relation but not change its schema

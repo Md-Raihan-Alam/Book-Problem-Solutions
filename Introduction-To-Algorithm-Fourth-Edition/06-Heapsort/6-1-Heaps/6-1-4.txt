@@ -1,0 +1,1 @@
+In a max-heap, where all elements are distinct, the smallest element will always reside in one of the leaf nodes.

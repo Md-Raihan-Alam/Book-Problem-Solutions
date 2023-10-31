@@ -1,0 +1,5 @@
+a-> a case where a professor in the Physics department teaches an Elec. Eng. course,it willbe lost in the natural join of instrucor , teaces and course
+since the instruct's department name does not match the department name of the course
+b->Instructors who have not taught a single course should have number of sectiosn as 0 in the query result
+c->the query=SELECT * FROM teaches NATURAL JOIN instructor, here we would lose some sections if teaches.ID is allowed to be null and such tuples exists. If just because teaches.ID 
+is a foreign ke to instructor, we did not create such a tuple, the error in the above query would not be detected.

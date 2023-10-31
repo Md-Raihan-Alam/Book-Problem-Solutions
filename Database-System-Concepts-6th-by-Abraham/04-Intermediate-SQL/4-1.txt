@@ -1,0 +1,2 @@
+The query is syntactically correct, ut it does not compute the expected answer ecause dept_name is an attribte of both course and instructor.
+As a result of the natural join, result are shown only when an instructor teaches a course in her or his own department

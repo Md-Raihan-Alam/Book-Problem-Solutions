@@ -1,0 +1,19 @@
+In the array representation for storing an n-element heap, the leaves are indeed the nodes indexed by ⌊n/2⌋ + 1, ⌊n/2⌋ + 2, ..., n. Here's the explanation:
+
+1. Consider the left child of the node indexed by ⌊n/2⌋ + 1. This left child's index can be calculated as:
+
+   LEFT(⌊n/2⌋ + 1) = 2(⌊n/2⌋ + 1)
+
+   We can simplify this to:
+
+   LEFT(⌊n/2⌋ + 1) = 2(⌊n/2⌋) + 2
+
+   For any positive integer ⌊n/2⌋, this expression is greater than n. This means that the left child of the node indexed by ⌊n/2⌋ + 1, along with any subsequent nodes with larger indices, are beyond the number of elements (n) in the heap.
+
+2. Since these nodes are beyond the range of valid indices for the heap, they do not have children. In a binary heap, leaves are the nodes that do not have any children, and the nodes indexed by ⌊n/2⌋ + 1, ⌊n/2⌋ + 2, ..., n fall into this category.
+
+3. It's important to note that if you take the element indexed by ⌊n/2⌋, it will not be a leaf. In the case of an even number of nodes, it will have a left child with an index of n, and in the case of an odd number of nodes, it will have a left child with an index of n - 1 and a right child with an index of n.
+
+4. The total number of leaves in a heap of size n is equal to ⌈n/2⌉, where ⌈n/2⌉ represents the ceiling function, ensuring you count the leaves correctly for both even and odd values of n.
+
+So, the leaves in a heap are indeed the nodes indexed by ⌊n/2⌋ + 1, ⌊n/2⌋ + 2, ..., n, which makes up ⌈n/2⌉ leaves in total.

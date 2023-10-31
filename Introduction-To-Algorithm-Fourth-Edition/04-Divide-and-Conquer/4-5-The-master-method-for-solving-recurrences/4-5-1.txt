@@ -1,0 +1,15 @@
+a=>given T(n)=2T(n/4)+1
+    here a=2,b=4, as log 4^2 <0 then O(n^logb^a)
+    so Θ(n^log4^2)=Θ(sqrt(n))
+b=>given T(n)=2T(n/4)+sqrt(n)
+    here a=2, b=4 so log4^2<-2 then 
+    so Θ(n^log4^2lgn)=Θ(sqrt(n)lgn)
+c=>given T(n)=2T(n/4)+sqrt(n)lg^2*n
+    here a=2,b=4 so log4^2<2 and p>=0 as p=2 
+    so Θ(n^2log^2*n)
+d=>given T(n)=2T(n/4)+n
+    here a=2, b=4, so log4^2<1 then
+        Θ(n^1)=Θ(n)
+e=>given T(n)=2T(n/4)+n^2
+     here a=2, b=4, so log4^2<2 then
+        Θ(n^2)=Θ(n^2)

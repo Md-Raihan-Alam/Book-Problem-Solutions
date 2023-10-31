@@ -1,0 +1,25 @@
+The function f(n) = 2^⌈lg n⌉ can be represented as follows:
+
+f(n) = 2^⌈lg n⌉ = 2^(lg n + 1)
+
+Now, let's consider the conditions for the master theorem:
+
+a f(n/b) ≤ c f(n) for some constant c < 1.
+
+   In this case, let's choose a = 1, b = 2, and c = 1/2.
+
+   a f(n/b) = 1 * 2^(⌈lg (n/2)⌉) = 2^⌈lg n - 1⌉ = (1/2) * 2^(lg n + 1) = (1/2) * f(n).
+
+   The condition a f(n/b) ≤ c f(n) is satisfied with c = 1/2.
+
+f(n) should be a polynomially bounded function, but in this case, f(n) = 2^(lg n + 1) grows exponentially.
+
+For any ε > 0, f(n) = Ω(n^(log_b(a+ε))):
+
+   We have a = 1, b = 2, and f(n) = 2^(lg n + 1).
+
+   n^(log_2(1+ε)) = n^(1+ε).
+
+   If we choose ε = 1, then n^(log_2(1+ε)) = n^2, which is a polynomial bound, and f(n) = 2^(lg n + 1) grows faster than any polynomial. So, the condition in case 3 is satisfied for ε = 1.
+
+In summary, the function f(n) = 2^⌈lg n⌉ satisfies all the conditions in case 3 of the master theorem except the regularity condition.

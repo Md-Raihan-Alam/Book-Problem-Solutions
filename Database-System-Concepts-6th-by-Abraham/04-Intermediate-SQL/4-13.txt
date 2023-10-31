@@ -1,0 +1,3 @@
+a-> No. This allows a user to be granted access to only part of relation r.
+b-> Yes, A valid update issued using view v must upated r for the update to be stored in the database
+c-> Any tuple t compatible with the schema fo v but not satisfying the where caluse in the defintion of view v is a valid example.

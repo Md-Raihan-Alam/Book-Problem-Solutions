@@ -1,0 +1,8 @@
+In a max-heap, the kth largest element can reside at different levels depending on the value of k. Here's a general idea:
+
+- The largest element (k=1) is always at the root of the max-heap, which is level 0.
+- For 2<=k<=3, the elements can be found at level 1.
+- For 4<=k<=7, the elements can be found at level 2.
+- And so on.
+
+This pattern follows because a heap is a complete binary tree and each level i (0-indexed) of this tree has 2^i nodes. So, for 2<=k<=floor(n/2), the kth largest element can be found from level 1 to level log2(k), as each subsequent level of the heap contains twice as many elements as the previous level.

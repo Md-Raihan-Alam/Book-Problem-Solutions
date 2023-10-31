@@ -1,0 +1,2 @@
+a->here r=(a,b),s=(b,c),t=(b,d). The second expressionwould give(a,b,null,d)
+b->s naturla left outer join t is computed first, the absence of nulls is both s and t implies that each tuple of the result can have D null, but C can never be null

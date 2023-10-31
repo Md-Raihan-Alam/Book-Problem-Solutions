@@ -1,0 +1,8 @@
+a. In this technique, you would move record 6 to the space occupied by record 5 and move record 7 to the space occupied by record 6. This approach has the advantage of compacting the file and maintaining 
+a continuous sequence of records. However, it involves moving multiple records, which can be time-consuming and may lead to additional I/O operations.
+
+b.In this technique, you would move record 7 to the space occupied by record 5, leaving an empty slot where record 7 was originally located. This approach is less computationally 
+intensive than moving two records, but it still involves moving data. It may result in some fragmentation if you have frequent deletions and insertions also order will be broken
+
+c. In this technique, you mark record 5 as deleted but do not physically move any records. This approach is efficient in terms of I/O and computational resources, as it avoids 
+data movement. However, it can lead to fragmentation over time, and it may require periodic compaction or reorganization of the file to reclaim space., simply means it might take too much space

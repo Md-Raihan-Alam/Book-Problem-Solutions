@@ -1,0 +1,24 @@
+In a divide-and-conquer matrix multiplication algorithm, if the divide and combine steps together take Θ(n^2) time, and the algorithm creates recursive subproblems of size n/a, the time complexity of the algorithm can be represented by the recurrence relation:
+
+T(n) = a * T(n/a) + Θ(n^2)
+
+In this case, n represents the size of the original problem (the size of the input matrices). Professor Caesar's algorithm is aiming to be faster than Strassen's algorithm, which has a time complexity of O(n^log₂(7)).
+
+To find the largest integer value of 'a' for which Professor Caesar's algorithm could possibly run asymptotically faster than Strassen's, we need to compare the time complexity of his algorithm to that of Strassen's.
+
+1. For Strassen's algorithm, the time complexity is O(n^log₂(7)).
+
+2. For Professor Caesar's algorithm, the time complexity is given by the recurrence relation T(n) = a * T(n/a) + Θ(n^2).
+
+We are looking for an 'a' value such that T(n) is better (smaller) than O(n^log₂(7)).
+
+To make a fair comparison, we need to convert the time complexity of Professor Caesar's algorithm to the same base as Strassen's, which is 2. Thus, we want to find the largest 'a' for which:
+
+O(n^2) < O(n^log₂(7))
+n^2 < n^log₂(7)
+
+Now, we can compare the exponents:
+
+2 < log₂(7)
+
+To make n^2 smaller than n^log₂(7), we need a value of 'a' that is greater than 7, but it must also be an integer. Therefore, the largest integer value of 'a' for which Professor Caesar's algorithm could possibly run asymptotically faster than Strassen's is 'a = 8' (or any larger integer), because it ensures that T(n) is better (smaller) than O(n^log₂(7)).

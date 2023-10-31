@@ -1,0 +1,11 @@
+The network architecture and application architecture is different.
+
+The network architecture contains Transport, Network, Data Link and Phsical. The network architecture is fixed and provides a specific set of services to applications.
+
+The application architecture, on the other hand, is designed by the application developer and dictates how the application is structured over the various end system. Usually two predominant
+architecture is used, client-server architecture and peer-to-peer architecture. In the client-server architecture, there is an always-on host, called ther server, which services requests from many other
+hosts, called clients. In peer-to-peer architecture, there is minimal (or no) reliance on dedicated servers in data centers. Instead the application exploits direct communication between pairs of
+intermittently connected hosts, called peers.
+
+So, the network architecture encompasses not only the layers but also the overall design and structure of a network, and application architecture encompasses not only the client-server 
+and peer-to-peer models but also the design of software applications.

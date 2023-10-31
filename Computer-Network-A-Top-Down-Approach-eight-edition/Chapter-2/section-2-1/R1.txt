@@ -1,0 +1,23 @@
+Non-proprietary Internet applications and their associated application-layer protocols include:
+
+1. Web Browsing:
+   - Application: Web browsers (e.g., Chrome, Firefox, Safari)
+   - Protocol: HTTP (Hypertext Transfer Protocol)
+
+2. Email:
+   - Application: Email clients (e.g., Outlook, Thunderbird)
+   - Protocols: SMTP (Simple Mail Transfer Protocol) for sending email, IMAP (Internet Message Access Protocol) or POP3 (Post Office Protocol, version 3) for receiving email.
+
+3. File Transfer:
+   - Application: FTP clients (e.g., FileZilla)
+   - Protocol: FTP (File Transfer Protocol)
+
+4. VoIP (Voice over IP):
+   - Application: VoIP software (e.g., Skype, Zoom)
+   - Protocols: SIP (Session Initiation Protocol), RTP (Real-time Transport Protocol)
+
+5. Remote Terminal Access:
+   - Application: SSH clients (e.g., PuTTY, OpenSSH)
+   - Protocol: SSH (Secure Shell)
+
+These applications and their associated non-proprietary protocols are widely used for various Internet-related tasks, such as browsing the web, sending and receiving emails, transferring files, making voice calls over the Internet, and securely accessing remote systems.

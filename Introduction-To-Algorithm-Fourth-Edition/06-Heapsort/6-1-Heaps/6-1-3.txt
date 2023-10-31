@@ -1,0 +1,11 @@
+A max-heap is a binary heap where the value of each node is greater than or equal to the values of its children. To prove that the root of a subtree in a max-heap contains the largest value in that subtree, we can use induction.
+
+1. Base Case: Consider a max-heap of height 0, which contains only one element (the root). In this case, the root is the maximum element in the heap, and the base case holds.
+
+2. Inductive Hypothesis: Assume that the statement is true for all max-heaps of height "k" or less.
+
+3. Inductive Step: We want to show that the statement holds for a max-heap of height "k+1." In a max-heap, the root of the heap is guaranteed to be larger than or equal to its children. So, within the max-heap of height "k+1," the root node is guaranteed to be larger than or equal to its children. 
+
+   When we consider any subtree within this max-heap, the root of that subtree (which is a child of the overall root) will still be larger than or equal to its children. This ensures that the largest value in the subtree is at its root.
+
+By induction, we've shown that in any subtree of a max-heap, the root of the subtree contains the largest value occurring anywhere in that subtree.

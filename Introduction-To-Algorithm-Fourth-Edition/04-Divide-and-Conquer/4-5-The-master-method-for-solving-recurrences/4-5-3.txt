@@ -1,0 +1,15 @@
+The master method is a way to solve recurrence relations of the form T(n) = aT(n/b) + Θ(f(n)). In this case:
+
+- a = 1
+- b = 2
+- f(n) = Θ(1)
+
+According to the master method:
+
+If f(n) = Θ(n^c) for some constant c < log_b(a), then T(n) = Θ(n^log_b(a)).
+
+In this case, a = 1 and b = 2. The condition a < b^c is satisfied because 1 < 2^0. So, you can apply the first case of the master method.
+
+Therefore, T(n) = Θ(log_b(n)) = Θ(log_2(n)) = Θ(log(n)).
+
+So, the solution to the binary search recurrence T(n) = T(n/2) + Θ(1) is indeed T(n) = Θ(log(n)).

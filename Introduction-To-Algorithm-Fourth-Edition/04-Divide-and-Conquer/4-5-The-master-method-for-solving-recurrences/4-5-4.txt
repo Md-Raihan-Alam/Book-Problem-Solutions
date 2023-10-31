@@ -1,0 +1,8 @@
+The regularity condition is not satisfied because:
+- f(n/2) = lg(n/2) = lg(n) - 1
+- f(n) = lg(n)
+
+Since f(n/2) = f(n) - 1, the condition a f(n/b) ≤ c f(n) with a = 1 and b = 2 cannot hold for any constant c < 1.
+
+Additionally, for any ε > 0, the condition in case 3, f(n) = Ω(n^(log_b(a+c))), doesn't hold because:
+- n^(log_2(1+ε)) is not bounded by a constant times f(n) = lg(n).
