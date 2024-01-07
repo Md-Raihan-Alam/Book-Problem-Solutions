@@ -1,0 +1,11 @@
+Creating indices on every attribute or combination of attributes can lead to several drawbacks:
+
+1. Increased Storage Space: Each index requires storage space. Having too many indices on a table can significantly increase the storage requirements, which may not be feasible, especially for large databases.
+
+2. Insert, Update, and Delete Performance: When you add, update, or delete records in a table, the associated indices need to be modified accordingly. Having too many indices can slow down these operations because each change must be reflected in multiple index structures.
+
+3. Complexity in Maintenance: Managing a large number of indices makes the database more complex to maintain. It requires additional effort to ensure that all indices are up-to-date and consistent with the actual data.
+
+4. Query Optimization Challenges: The database management system (DBMS) needs to determine the most efficient way to execute a query, taking into account the available indices. With a large number of indices, the query optimizer faces increased complexity and may struggle to find the optimal execution plan.
+
+5. Risk of Redundancy: Creating indices on every attribute or combination increases the likelihood of redundant or overlapping indices. Redundant indices not only waste storage space but can also confuse the query optimizer, leading to suboptimal performance.

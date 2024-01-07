@@ -1,0 +1,19 @@
+Professor Uriah's idea of replacing the while loop of lines 5–7 in `MAX-HEAP-INCREASE-KEY` with a call to `MAX-HEAPIFY` may seem tempting to achieve the same goal, but it has a fundamental flaw. The flaw lies in the fact that `MAX-HEAPIFY` is designed to maintain the max-heap property for a subtree rooted at a given node, not for a single element.
+
+Here's an explanation of why using `MAX-HEAPIFY` as suggested by Professor Uriah is problematic:
+
+1. Incorrect Subtree:
+   - `MAX-HEAPIFY` works on a subtree of the heap, starting from a given node and assuming that the subtrees rooted at the left and right child of that node are already max-heaps.
+   - In the context of `MAX-HEAPIFY`, the element at index `i` is considered the root of a subtree.
+   - When you call `MAX-HEAPIFY` on index `i`, it will try to move the element at index `i` and its descendants down the tree to restore the max-heap property within that subtree.
+
+2. Violation of Element Identity:
+   - When you use `MAX-HEAPIFY`, it may move elements around within the subtree and potentially change their relative positions.
+   - However, in the case of `MAX-HEAP-INCREASE-KEY`, you are dealing with a specific element, `x`, which has an identity associated with it. This identity is critical, especially if the element's position in the array matters.
+   - If you use `MAX-HEAPIFY`, it might change the position of other elements in the array, not just the element `x`. This can lead to a mix-up in the identity of elements and their positions in the array.
+
+3. Efficiency:
+   - `MAX-HEAPIFY` is designed to work on subtrees and may be less efficient when applied to a single element because it might perform unnecessary swaps for unrelated elements.
+   - The while loop in the original `MAX-HEAP-INCREASE-KEY` is efficient, as it focuses on adjusting the position of the specific element being updated without affecting other elements.
+
+In summary, the while loop in the original `MAX-HEAP-INCREASE-KEY` procedure is designed to efficiently adjust the position of a single element within the max-heap while maintaining its identity and relative position in the array. Using `MAX-HEAPIFY` would not provide the same guarantees and could lead to incorrect results, changes in element positions, and potentially higher time complexity.

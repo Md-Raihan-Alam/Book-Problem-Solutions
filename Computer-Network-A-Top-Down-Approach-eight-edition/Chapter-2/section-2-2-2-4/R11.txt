@@ -1,0 +1,2 @@
+THe TCP provide connection-oriented service and reliable data trasnfer service, and the data can be encrypted for security, so the HTTP,SMTP,IMAP run on top of TCP rather than on
+UDP as UDP do not provide thoses

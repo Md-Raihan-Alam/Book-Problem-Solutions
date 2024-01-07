@@ -1,0 +1,3 @@
+Several popular messaging apps are WhatsApp, Messenger, Telegram, Signal
+
+THey do not use same protocol as SMS, they have their own protocol

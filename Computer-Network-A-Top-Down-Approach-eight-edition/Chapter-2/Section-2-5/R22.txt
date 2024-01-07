@@ -1,0 +1,7 @@
+When Alice join BitTorrent as a first peer and if she have no chuncks then she has to wait. as over time Alice will accumulates more and more chunk why she will try to download torrent.
+
+For Alice to get her first chunk, she needs to rely on other peers that already have parts of the file. As she connects to the swarm and starts communicating with other peers and the tracker,
+ she will identify peers that have the chunks she needs. Alice will then download these chunks from the other peers, gradually accumulating parts of the file.
+
+Once Alice has downloaded some chunks, she can start contributing to the swarm by uploading these chunks to other peers. Over time, as she continues to download and upload chunks,
+ Alice's share in the distributed file grows, and she becomes a more active participant in the sharing process.

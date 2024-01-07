@@ -1,0 +1,24 @@
+1. In network devices add 4321 router to topology and add another 4321 router.
+
+2. In switches, add 3650 switch.
+
+3. In connection, select copper cross-over, add to first 4321 router as giga 0/0/0
+and add it to 3650 switch as giga 1/0/1 and now select another copper corss-ver and add to second 4321 router and select giga 0/0/0 and add to swithc giga 1/0/2, in simple terms select the first ones.
+
+4. the interface is down because power if off, so select switch go to physical ac-power-supply, drag and add it and I can see switch being booted at cli and color will changed when I will enable the port at router, so I need to do it by using no shutdown command, now for now see the cli in switch, if I type 'yes' I will get through inital configuration, and I will be asked bunch of question, the answer is given below, I can understand the question ok,
+	basic setup:yes
+	switch name:S1,
+	secret :cisco,
+	enable password:cisco1,
+	terminal password:cisco,
+	snmp netowork:no,
+I should see bunch of interfaces, I will be asked to enter the interface name used to connect to management network from givens: GigabitEthernet1/1/4
+now configure ip on this inteface: no,
+enter selection:0
+and now perss enter, DONE. -> not good for real world
+
+5. now cick router, go to cli, enter "no". now enter "enable" for enable then enter "conf t" for global configuration mode and then type "interface gigabitEthernet 0/0/0",( the interface depends on device , a trick is type "show ip int brief" to show interface on router, "end" to go to privigaes mode, and shortcut is ="int g0/0/0" which is "interface gigabitEthernet 0/0/0"). now type "ip address 10.1.1.1 255.255.255.0" and press enter, now type "no shutdown" and down and type "exit" and type "hostname R1" and type "end" and type "copy running-config startup-config" to save router configuaration and DONE.
+6. similal for second router, host is R2, and interface is "inteface gigabitEthernet 0/0/0", "ip address 10.1.1.2 255.255.255.0", now all router is green and orange( for switch wait 30 sec to go green), on router 1 ping router 2, "ping 10.1.1.2", now on router 1 "ping 10.1.1.1" in cli
+
+and basic cisco network is created
+	

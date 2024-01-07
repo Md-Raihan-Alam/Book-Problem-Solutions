@@ -1,0 +1,61 @@
+192.168.1.64/26
+
+192.168.1.01	000000=192.168.1.64/26
+
+Hosts=8
+2^2=4 Subnets
+2^n-2->Hosts
+2^4-2->14 Hosts
+
+Network		/Sub	Host
+192.168.1.01	00	0000=192.168.1.64/28
+192.168.1.01	01	0000=192.168.1.80/28
+192.168.1.01	10	0000=192.168.1.96/28
+192.168.1.01	11	0000=192.168.1.112/28
+
+Network
+192.168.1.01	1100	00=192.168.1.112/30
+192.168.1.01	1101	00=192.168.1.116/30
+192.168.1.01	1110	00=192.168.1.120/30
+192.168.1.01	1111	00=192.168.1.114/30
+
+Network		/Sub	Host
+192.168.1.01	00	0000=192.168.1.64/28
+192.168.1.01	00	0001=192.168.1.65/28
+192.168.1.01	00	1110=192.168.1.78/28
+192.168.1.01	00	1111=192.168.1.79/28
+
+28=8+8+8+4
+
+1111 0000=240
+
+now go to R1, go to CLI, type=en, type "sh run", type "conf t", type "int s0/1/0", type "ip address 192.168.1.113 255.255.255.252", 
+
+now tgo to intRouer, go to cli, type en, type "sh run" type "conf t", type "int s0/1/0" type "ip address 192.168.1.114 255.255.255.252", type "end", type "ping 192.168.1.114", 
+
+on R1, go to CLI, type "end", type "sh ip route", "ping cisco.com" type "conf t", type "ip domain-lookup", type "ip name-server 8.8.8.8" , type "end", type "ping cisco.com", ping facebook.com
+
+in IntRouter type "q", type "wr"
+ 
+--
+
+on R4, go to CLI, type "wn", type "en", type "conf t", type "int s0/1/0", type "end", type "sh cdp nei", for neighbour connectivity,type "conf t", type "s0/1/0", type "ip address 192.168.1.117 255.255.255.252",type "end", 
+
+go to intRouter, go to CLI, type "wr",type "en", type "conf t", type "int s0/2/0", type "ip address 192.168.1.118 255.255.255.252", type "end", now ping 192.168.1.117,
+type "wr"
+
+go to R4, go to CLI, type "sh ip route", type "conf t", tyep "ip domain-lookup", type "ip name-server 8.8.8.8" , type "end" , ping cisco.com,ping facebook.com, type "wr",
+
+go to R4, type "sh cdp nei", type "int g0/0/0", type "ip address 192.168.1.78 255.255.255.240", type "end", 
+
+go to Switch3, go to CLi, type "en", tyep "conf t", type "int vlan 1", type "ip address 192.168.1.77 255.255.255.240", type "no shut" , type "end", ping 192.168.1.78, if ping fails, type "conf t", type "ip default-gateway 192.168.1.78", type "end",now ping again, now type "conf t", type "ip  domain-lookup ", type "ip name-server 8.8.8.8",now ping cisco.com
+
+go to R4, ping cisco.com
+
+go to intRouter, ping cisco.com 
+
+go to PC6, go to config, got to FastEthernet0, type IP address=192.168.1.65, subnet mask=255.255.255.240, go to Global=Settings= gateway=192.168.1.78, dns server=8.8.8.8, go to Desktop, cmd, ping ciscos.com, go to browser and access it,
+
+go to PC7, go to Config, go to FasEtherenet0, type static fo Ip config, IP address=192.168.1.66, subnet mask=255.255.255.240, go to settings, gateway=192.168.1.78,dns server=8.8.8.8, go to Desktop, cmd, ping ciscos.com, go to browser and access it,
+
+go to PC8, go to Config, go to FasEtherenet0, type static fo Ip config, IP address=192.168.1.67, subnet mask=255.255.255.240, go to settings, gateway=192.168.1.78,dns server=8.8.8.8, go to Desktop, cmd, ping ciscos.com, go to browser and access it,

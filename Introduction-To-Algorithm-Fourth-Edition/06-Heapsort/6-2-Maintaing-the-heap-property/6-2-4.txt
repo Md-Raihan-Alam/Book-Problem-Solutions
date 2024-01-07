@@ -1,0 +1,1 @@
+No effect. The comparisons are carried out, A[i] is found to be largest and the procedure just returns.

@@ -1,0 +1,2 @@
+If there are K serach-key values and m-1 siblings are involved in the 
+redistribution, the expected height of the tree is log[(m-1)n/m](K)

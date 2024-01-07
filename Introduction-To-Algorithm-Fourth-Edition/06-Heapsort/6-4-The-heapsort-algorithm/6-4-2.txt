@@ -1,0 +1,5 @@
+Initialization: The subarray a{i+1..n} is empty, thus the invariant holds.
+Maintenance: A[1] is the largest element in A[1...i] and it is smaller than the element in 
+A[i+1..n]. When we put it in the ith position, then A[i..n] contains the largest elements, sorted. Decreasing the heap size and calling MAX-HEAPIFY
+turn A[1...i-1] into max-heap. Decrementing i sets up the invariant for the next iteration.
+Termination:After the loop i==1. This mean that A[2..n] is sorted and A[1] is the smalles elemnt in the array which makes the array sorted.

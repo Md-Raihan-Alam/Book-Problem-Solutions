@@ -1,0 +1,11 @@
+An overlay network is a computer network built on top of an existing network. It consists of a virtual or logical network that is
+ created using software and runs on top of the underlying physical network
+
+The overlay network itself, in its logical or virtual form, does not necessarily include traditional routers. Overlay networks are typically built on top of the existing physical 
+ network infrastructure, and their design focuses on end-to-end communication between nodes (end systems or hosts) rather than involving intermediate routers in the overlay.
+While the overlay network may not directly include routers, the routers in the underlying physical network are still responsible for forwarding packets between overlay nodes. The 
+communication within the overlay network is often facilitated through tunneling techniques, where the overlay packets are encapsulated within the packets of the underlying network.
+ Routers in the physical network handle the routing of these encapsulated packets based on their own routing tables.
+
+ In the context of an overlay network, the edges refer to the logical connections or links between nodes in the overlay. These edges represent the paths along which information or 
+ data can be exchanged between nodes. Each edge in the overlay network connects two nodes, indicating a potential communication link between them.

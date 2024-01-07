@@ -1,0 +1,8 @@
+MAX-HEAP-DECREASEKEY(A, x, k)
+    if k > A[x]
+        error "New key is greater than the current key"
+    A[x] = k
+    while x > 1 and A[PARENT(x)] < A[x]
+        exchange A[x] with A[PARENT(x)]
+        x = PARENT(x)
+Time complexity of MAX-HEAP-DECREASEKEY O(log n), which ensures efficient maintenance of the max-heap property.

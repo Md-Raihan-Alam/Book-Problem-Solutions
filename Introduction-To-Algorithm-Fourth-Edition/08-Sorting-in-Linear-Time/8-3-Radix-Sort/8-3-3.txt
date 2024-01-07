@@ -1,0 +1,13 @@
+Loop Invariant:
+At the beginning of each iteration of the for loop, the array is sorted based on the last i-1 digits.
+
+Initialization:
+The array is trivially sorted on the last 0 digits.
+
+Maintenance:
+Assume that the array is sorted on the last i-1 digits before entering the loop. After sorting based on the i-th digit, the array will be sorted on the last i digits. Elements with different digits in the i-th position are ordered correctly. In the case of the same i-th digit, the stability of the sort ensures that elements remain in the same relative order as they were on the last i-1 digits.
+
+Termination:
+The loop terminates when i = d+1, where d is the number of digits in the input numbers. Since the invariant holds, the array is sorted on all d digits.
+
+This proof by induction establishes that Radix Sort correctly sorts the array based on each digit, and the stability of the sorting algorithm ensures the overall correctness of the sorting process.

@@ -1,0 +1,33 @@
+To show that each child of the root of an n-node heap is the root of a subtree containing at most 2n/3 nodes, we can use the properties of a max-heap (or min-heap). In a max-heap, for any given node, all the nodes in its subtrees have values less than or equal to the value of the node itself.
+
+1. Each child of the root is either the left child or the right child. Let's consider the left child first.
+
+2. The left child will be the largest element among all its children. So, the left child's subtree can contain at most n/3 elements (since there are two other subtrees).
+
+3. Similarly, for the right child, it can also contain at most n/3 elements.
+
+4. The root itself contains 1 element.
+
+Now, if we add up the number of nodes in the root, left child's subtree, and right child's subtree, we get:
+
+1 (root) + n/3 (left child's subtree) + n/3 (right child's subtree) = n/3 + n/3 + 1 = (2n/3) + 1
+
+Since we're concerned with the maximum number of nodes in a child's subtree, we ignore the "+1" and just consider 2n/3. This shows that each child of the root contains a subtree with at most 2n/3 nodes.
+
+Now, let's find the smallest constant α such that each subtree has at most αn nodes. In this case, α is 2/3.
+
+The recurrence relation T(n) <= T(2n/3) + Θ(1) represents the time complexity of an operation on a data structure that exhibits this property. The recurrence relation means that when you perform an operation on a data structure with n nodes, you can break it down into two smaller operations on structures with at most (2/3)n nodes, and the cost of each operation is Θ(1).
+
+You can solve this recurrence relation using the Master Theorem. The Master Theorem states that if T(n) = aT(n/b) + f(n), then the time complexity is:
+
+- If f(n) = O(n^log_b(a - ε)), where ε > 0, then T(n) = Θ(n^log_b(a)).
+
+- If f(n) = Θ(n^log_b(a)), then T(n) = Θ(n^log_b(a) * log n).
+
+- If f(n) = Ω(n^log_b(a + ε)), where ε > 0, and if a*f(n/b) <= k*f(n) for some k < 1 and sufficiently large n, then T(n) = Θ(f(n)).
+
+In your case, a = 1, b = 3/2, and f(n) = Θ(1). You can see that f(n) = Θ(1) is in the first case of the Master Theorem. Therefore, the solution is T(n) = Θ(n^log_(3/2)(1)).
+
+Now, log_(3/2)(1) is 0 because 3/2^0 = 1. Therefore, T(n) = Θ(1).
+
+This means that the time complexity of operations on this data structure is constant, which is very efficient. The fact that each subtree has at most 2/3n nodes doesn't significantly affect the recurrence relation or its solution because the constant factor in the Θ(1) term remains the same.

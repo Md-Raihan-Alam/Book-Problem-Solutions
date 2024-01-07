@@ -1,0 +1,18 @@
+Certainly, I'll do my best to rearrange the paragraph for clarity without changing the meaning:
+
+We assume that  T(n) >= cn^2 - 2n , where ( T(n) ) is given by:
+
+
+    T(n) = max{0 <= q <= n-1} (T(q) + T(n-q-1)) + Θ(n)
+
+
+Now, let's analyze the recurrence relation:
+
+
+T(n) >=  max{0 <= q <= n-1}(cq^2 - 2q + c(n-q-1)^2 - 2n - 2q - 1) + Θ(n) 
+>= c  max{0 <= q <= n-1}(q^2 + (n-q-1)^2 - (2n + 4q + 1)/(c)) + Θ(n) 
+>= cn^2 - c(2n-1) + Θ(n) 
+>= cn^2 - 2cn + 2c 
+>= cn^2 - 2n
+
+Here, we have used the assumption that ( c <= 1 ). This analysis shows that ( T(n) >= cn^2 - 2n ), and the given inequality holds.

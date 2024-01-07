@@ -1,0 +1,74 @@
+1. 192.168.1.0/24 -> 4 subnets
+
+	2^n-> Subnets 2^2=4
+	Subnet=Stealing
+	2^1=2
+	2^2=4->this is the one, so 24+2=16
+	2^3=8
+	2^4=16
+ 	
+   192.168.1.0 into binary
+   111111111.11111111.11111111.00000000=24
+   255      .255     .255     .0
+   Here the network & host is
+	192.168.1=Network
+	0=Host
+	getting subnet
+	Network 	Subnet 	Host
+	192.168.1.	00	000000=192.168.1.0/26
+	192.168.1.	01	000000=192.168.1.64/26
+	192.168.1.	10	000000=192.168.1.128/26
+	192.168.1.	11	000000=192.168.1.192/26
+Now set up the subnets
+
+2. Now set up the first host
+	The subnet host for first one is 
+	192.168.1.00000000=192.168.1.0/26
+	so  
+	    Network	Subnet 	Host
+	Net=182.168.1.	00	000000=192.168.1.0/26
+	1st=182.168.1.	00	000001=192.168.1.1/26
+   3rd last=182.168.1.	00	111100=192.168.1.60/26
+   2nd last=182.168.1.	00	111101=192.168.1.61/26
+       Last=182.168.1.	00	111110=192.168.1.62/26
+       Broad=182.168.1.	00	111111=192.168.1.63/26
+Now click R1, go to CLI, enter "Enter", enter "en", enter "sh ip int brief", no ip address for GigabitEthernet0/0/0, now enter "conf t" and then "int g0/0/0", then "no shut" then "ip add", then "ip address 192.168.1.62 255.255.255.192",(ip address of last and mask as 11111111.11111111.11111111.11000000) then "end", now enter "sh ip int brief" , now you can "ping 192.168.1.62" , 
+
+now click switch1, go to cli, enter "en", enter "conf t",enter "host S1" to name, enter "int vlan 1", enter "no shut", nwo enter "ip address 192.168.1.61 255.255.255.192", enter "end", enter "sh ip int brief". ip address for switch, now ping "192.168.1.62",
+
+now click "Server1", got to config, click FastEthernet0, for ip address =192.168.1.60, subnet mask=255.255.255.192, now go to setting, , set getaway=192.168.1.62 & DNS server=8.8.8.8 as Server-PT->server->DNS,see set up as 8.8.8.8, now in server go to desktop , go to command prompt, ping 192.168.1.61 for switch, ping 192.168.1.62 for router
+
+now specify a default gateaway in switch1 which is router, go to cli in switch1, enter "en", enter "conf t", enter "ip de", enter "ip def", enter "ip default-g", enter "ip default-gataway 192.168.1.62", enter "end", enter now "ping 192.168.1.62", now enter "wr",
+
+now go to server1, go to services, click DHCP, click "on" for server, now enter default gateway=192.168.1.62, dns server is 8.8.8.8, start ip addrse=192.179.1.1 and subnet mask is 255.255.255.192, you can set maximum number of users up to 62 because the subnet only support 62 ip address, so I set 50 extra for the network devices, make sure TFTP server and WLC address is 0.0.0.0 and click save, 
+
+now check the PC0,Pc1,PC2, go to desktop, go to command prompt, check ip address by "ipconfig", try to ping 192.168.1.62 for default gateway
+okay first one done
+
+3.The subnet host for second one is 
+	192.168.1.01000000=192.168.1.64/26
+	so  
+	    Network	Subnet 	Host
+	Net=182.168.1.	01	000000=192.168.1.64/26
+	1st=182.168.1.	01	000001=192.168.1.65/26
+   3rd last=182.168.1.	01	111100=192.168.1.124/26
+   2nd last=182.168.1.	01	111101=192.168.1.125/26
+       Last=182.168.1.	01	111110=192.168.1.126/26
+       Broad=182.168.1.	01	111111=192.168.1.127/26
+go to R1, go to cli, type "en",type "sh ip int brief", type "conf t", type "int s0/1/0", type "no shut", type "ip address 192.168.1.65 255.255.255.192", type "end", type "sh ip int brief", to check assigned ip value
+
+go to IntRouter, go to cli, type "en", type "sh ip int brief", type "conf t", type "int s0/1/0", type "no shut", type "ip add", type "ip adderss 192.168.1.126 255.255.255.192", type "end" , ping 192.168.1.65, type "wr", nw in R1, ping 192.168.1.126, now ping 8.8.8, now in pc1 , in cmd, ping 8.8.8.8, tracert 8.8.8.8, in IntRouter, in cli, type "sh ip nat translations", you can see NAT has been pre-configured, now in PC0, in Desktop, go to browser, check http://cisco.com, http://facebook.com, check in PC2, 
+
+4. now in R2, go to cli, type "en", type "conf t", type "int g0/0/0", type  "ip address 192.168.1.190 255.255.255.192"(calculate like before), type "no shut", 
+
+now in Switch2, go to cli, type "en", type "conf t", type "host S2",type "int vlan 1", type "ip address 192.168.1.189 255.255.255.192", type "no shut", ping 192.168.1.189, ping 192.168.1.190, now type "wr" type "conf t", type "ip default-gateway 192.168.1.190", type "end", type "sh ip int brief", 
+
+in serve2, go to config, go to FastEthernet0 , set ip address 192.168.1.188, subnet mask 255.255.255.192, go to setings in config, gateway is 192.168.1.190, DNS server 8.8.8.8, go to desktop, go to cmd, ping 192.168.1.190, ping 192.168.1.189, ping 8.8.8.8,, go to services, go to dhcp, set Service on, set default gateway 192.168.1.190, dns server 8.8.8.8, start ip address 192.168.1.129, subnet mask 255.255.255.192, maximum number of users 10, iftp server:0.0.0.0 and wlc address 0.0.0.0, click save
+
+go to pc3, desktop cmd, type ipconfig, ping 192.168.1.190, ping 192.168.1.189, ping 192.168.1.188, check for pc5,
+
+in R2, in cli, type "end", type "sh ip int brief",type "conf t", type "int s0/1/0", type "no shut", type "ip address 192.168.1.193 255.255.255.192", type "end" now ping 192.168.1.193 (wont't work), so go to intRouter, in cli , type "sh ip int brief", type  "conf t", type "int s0/1/1" type "ip address 192.168.1.254 255.255.255.192" type "no shut", type "end" , type "sh ip int brief" to see asigned ip address,
+
+in R2, in cli, ping 192.168.1.254, type "wr", now in pc3 in cmd ping 8.8.8.8
+
+for last test check ping 192.168.1.2(any of pc0,pc1,pc2) in pc3/pc4/pc5 to see if they can connect pc0/pc1/pc2 and see tracert 192.168.1.1

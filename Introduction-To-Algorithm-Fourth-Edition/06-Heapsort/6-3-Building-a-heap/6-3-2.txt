@@ -1,0 +1,11 @@
+To show that ⌈n/2^(h + 1)⌉ ≥ 1/2 for 0 ≤ h ≤ ⌊lg n⌋, we can consider the values of h in that range and prove that the expression is greater than or equal to 1/2.
+
+1. When h = 0:
+   ⌈n/2^(0 + 1)⌉ = ⌈n/2⌉. Since n is a positive integer (as it represents the size of a data structure or array), ⌈n/2⌉ will always be greater than or equal to 1/2.
+
+2. When h = 1:
+   ⌈n/2^(1 + 1)⌉ = ⌈n/4⌉. Again, since n is a positive integer, ⌈n/4⌉ will always be greater than or equal to 1/2.
+
+3. In general, for 0 ≤ h ≤ ⌊lg n⌋, the expression ⌈n/2^(h + 1)⌉ decreases as h increases. However, it is always greater than or equal to 1/2 because n is a positive integer, and the denominator is always a positive power of 2.
+
+So, for all values of h in the range 0 ≤ h ≤ ⌊lg n⌋, the expression ⌈n/2^(h + 1)⌉ is greater than or equal to 1/2. This means that the ceiling of n divided by 2^(h + 1) is always at least 1/2 for these values of h.

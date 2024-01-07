@@ -1,0 +1,15 @@
+we know that the leaves of a heap are the nodes indexed by
+⌊n/2⌋+1,⌊n/2⌋+2,…,n.
+
+Note that those elements corresponds to the second half of the heap array (plus the middle element if n is odd). Thus, the number of leaves in any heap of size 
+n is ⌈n/2⌉. Let's prove by induction. Let n[h]  denote the number of nodes at height ℎ
+The upper bound holds for the base since 
+n[0]=⌈n/2⌉ is exactly the number of leaves in a heap of size n.
+Now assume it holds for h−1. We have prove that it also holds for h. Note that if n[h−1]
+is even each node at height h has exactly two children, which implies 
+n[h]=n [h−1]/2=⌊n h−1/2⌋. If n[h−1]  is odd, one node at height ℎ
+h has one child and the remaining has two children, which also implies 
+n[h]=⌊n [h−1]/2⌋+1=⌈n[h−1] /2⌉. Thus, we have
+n[h]=ceil(n[h-1]/2)<=ceil((1/2).ceil(n/(2&(h-1)+1)))
+=ceil(1/2.(n/2^h))=ceil(n/2^(h+1)).
+which implies that it holds for h

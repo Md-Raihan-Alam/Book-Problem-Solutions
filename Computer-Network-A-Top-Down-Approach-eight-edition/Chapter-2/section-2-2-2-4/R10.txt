@@ -1,0 +1,2 @@
+TCP has the client and server exchange transport-layer control informationwith each other before the application-level messages begin to flow. o: The process begins with the initiating device (client) sending a TCP packet with the SYN flag set to the receiving device (server)
+, The server responds with a TCP packet that has both the SYN and ACK flags set,Finally, the client acknowledges the server's response by sending a TCP packet with the ACK flag set, the procudure is known as handshaking protocol

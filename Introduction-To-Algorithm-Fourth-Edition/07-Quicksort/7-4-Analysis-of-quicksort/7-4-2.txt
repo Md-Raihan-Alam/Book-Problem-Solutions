@@ -1,0 +1,21 @@
+Let ( T(n) ) be the best-case time for the procedure QUICKSORT on an input of size ( n ). The recurrence relation is given by:
+
+[ T(n) = min_(1 >= q >= n-1) ( T(q) + T(n-q-1) ) + Θ(n) ]
+
+We aim to show that ( T(n) <= c(n lg n + 2n) ) for some constant ( c ), indicating a best-case running time of ( Omega(n lg n) ). Assuming ( T(n) <= c(n lg n + 2n) ), we substitute this guess into the recurrence relation:
+
+[ T(n) <= min_(1 >= q >= n-1) ( cq lg q + 2cq + c(n-q-1) lg (n-q-1) + 2c(n-q-1) ) + Θ(n) ]
+
+Simplifying, we obtain:
+
+[ T(n) <= (c n)/(2) * lg (n)/(2) - (c n)/(2) + c ( (n)/(2) - 1 ) ( lg (n)/(2) - 2 ) + 2c n - 2c + Θ(n) ]
+
+Further simplification yields:
+
+[ T(n) <= ((c n)/(2))* lg n - (c n)/(2) + c ( (n)/(2) - 1 ) ( lg n - 2 ) + 2c n - 2c + Θ(n) ]
+
+Combining terms, we get:
+
+[ T(n) <= c n lg n + (c n)/(2) - c lg n + 2c - 2c + Θ(n) ]
+
+Taking the derivative with respect to ( c ) reveals that the minimum is achieved when ( c = n/2 ). Choosing ( c ) large enough to dominate the ( -lg n + 2 - 2c + Θ(n) ) term makes the expression greater than ( c n lg n ), thereby proving the bound.

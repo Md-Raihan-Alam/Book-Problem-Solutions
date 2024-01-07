@@ -1,0 +1,1 @@
+It is Θ(n ^2), since one of the partitions is always empty

@@ -1,0 +1,6 @@
+We represent Θ(n) as c[2]n and we guess that T(n)≤c[1]n^2,
+    T(n)=T(n−1)+c[2]n≤c[1](n−1)^2+c[2]n
+        =c[1]n^2−2c[1]n+c[1]+c[2]n(2c[1]>c[2],n≥c[1]/(2c[1]−c[2]))≤c[1]n^2
+​
+ 
+

@@ -1,0 +1,5 @@
+In the worst case, the number of calls to RANDOM is 
+    T(n)=T(n-1)+1=n=Θ(n);
+as for the base,
+    T(n)=@T(n/2)+1=Θ(n)
+because each third elemnt(at least) gets picked as pivot.

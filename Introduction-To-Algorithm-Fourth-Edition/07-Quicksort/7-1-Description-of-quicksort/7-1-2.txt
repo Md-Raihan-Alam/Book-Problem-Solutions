@@ -1,0 +1,3 @@
+It returns r.
+
+We can modify partitions by counting number of comparisons in which A[j]=A[r] and then subracting half that number from pivot index

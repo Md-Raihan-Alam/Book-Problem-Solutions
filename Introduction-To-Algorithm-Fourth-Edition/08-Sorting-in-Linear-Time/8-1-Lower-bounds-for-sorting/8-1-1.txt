@@ -1,0 +1,2 @@
+For a permutation a1<=a2<=...<=a[n], there are n-1 pairs of relative ordering, thus
+the smallest possible depth is n-1

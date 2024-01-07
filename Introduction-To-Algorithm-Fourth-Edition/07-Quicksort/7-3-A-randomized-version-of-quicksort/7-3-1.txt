@@ -1,0 +1,3 @@
+We analyze the expected run time because it represent the more typical time cost. Also we are doing 
+the expected run time over the possible randomness used during computation becuase it can't 
+be produced adversarially, unlike when doing expected run time over all possibl einputs to the algorithm

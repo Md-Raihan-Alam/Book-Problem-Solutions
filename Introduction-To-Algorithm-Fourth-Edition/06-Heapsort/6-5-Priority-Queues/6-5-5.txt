@@ -1,0 +1,1 @@
+In order to pass the guard caluse. Otherwise we have to drop to check if key<A[i]

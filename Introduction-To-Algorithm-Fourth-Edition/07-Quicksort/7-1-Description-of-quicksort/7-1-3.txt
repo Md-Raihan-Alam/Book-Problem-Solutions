@@ -1,0 +1,9 @@
+The running time of the PARTITION procedure in quicksort on a subarray of size n is indeed  Θ(n) . Here's an explanation:
+
+In the PARTITION procedure of quicksort, a pivot element is chosen from the subarray, and elements are rearranged such that elements smaller than the pivot are on its left, and elements greater than the pivot are on its right. The pivot's final position is returned, and the subarray is divided into two parts.
+
+The primary operation in the PARTITION procedure is the loop that iterates through the subarray to rearrange elements based on their relationship to the pivot. Let's denote the size of the subarray as n. In the worst case, every iteration of the loop results in a comparison and a swap, and the loop runs for n-1 iterations.
+
+So, the time complexity of the loop is  Θ(n) . Note that the other operations outside the loop, such as choosing the pivot and swapping elements to finalize the position of the pivot, are constant time operations.
+
+Therefore, the overall time complexity of the PARTITION procedure is dominated by the loop, and it is  Θ(n)  in the worst case. This analysis holds when we consider the worst-case scenario, where the pivot selection consistently leads to a subarray of size n-1 in each recursive call.

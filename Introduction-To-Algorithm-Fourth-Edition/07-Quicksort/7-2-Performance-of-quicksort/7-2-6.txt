@@ -1,0 +1,5 @@
+In order to produce a worse split than 
+1−α to α, PARTITION must pick a pivot that will be either within the smallest 
+αn elements or the largest αn elements. The probability of either is (approximately) 
+αn/n=α and the probability of both is 
+2α. Thus, the probability of having a better partition is the complement, 1−2α.

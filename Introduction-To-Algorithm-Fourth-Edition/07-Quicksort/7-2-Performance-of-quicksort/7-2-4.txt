@@ -1,0 +1,4 @@
+The more sorted the array is , the less work insertion sort will do. Namely, insertion-sort is Θ(n+d), where
+d is the number of inversion in the array. In the example give the number of inversion tends to be samll so insertion sort will be close to linear.
+On the other hand, if partition des pick a pivot that does no participate in an inversion, it will produc an empty partition.
+Since there is a small number of inversion, quicksort is very likeyly to produc empty partitions.

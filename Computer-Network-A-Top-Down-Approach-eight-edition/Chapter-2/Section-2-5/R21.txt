@@ -1,0 +1,7 @@
+Bob will return the favor if he receives higher bit from Alice, if not then he will not provide chuncks to Alice in same interval
+
+In the BitTorrent protocol, the concept of "tit-for-tat" is employed. If Alice provides chunks to Bob, Bob is more likely to reciprocate and 
+provide chunks to Alice. However, it's not solely based on whether Bob received higher bits from Alice.
+
+In BitTorrent, peers prioritize sharing with those who have shared with them. The more a peer contributes to others, the more likely it is to receive data in return. This cooperative 
+behavior helps in efficient and fair distribution of the file among peers in the BitTorrent network.

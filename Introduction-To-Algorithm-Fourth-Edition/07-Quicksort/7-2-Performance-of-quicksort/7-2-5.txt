@@ -1,0 +1,13 @@
+Certainly! Here's a concise explanation:
+
+In quicksort, with splits in the constant proportion α to  β where α +  β = 1 and 0 < α leq  β < 1, we can analyze the minimum and maximum depths of leaves in the recursion tree.
+
+1.  Minimum Depth: 
+   - For the minimum depth, the splits consistently in the proportion α to  β.
+   - The minimum depth d_text[min] is approximately log_(α ) n.
+
+2.  Maximum Depth: 
+   - For the maximum depth, the splits consistently in the proportion  β to α.
+   - The maximum depth d_text[max] is approximately log_ ( β ) n.
+
+In both cases, the analysis is based on the fact that the recurrence relation for quicksort with constant splits is T(n) = T(α n) + T( β n) + O(n).

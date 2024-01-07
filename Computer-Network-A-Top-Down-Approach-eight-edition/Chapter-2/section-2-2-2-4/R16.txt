@@ -1,0 +1,15 @@
+Alice invokes her user agent for e-mail, provides BGob's e-mail address, composes a message and instructs 
+the user agent to send the message. Alice's user agen sends the message to her mail server, where it is placed in a 
+message quee, The client side of SMTP, running on Alice's mail server, sees the message in the messag queue. It opens a TCP connection to an SMTP server, running on BOb's mail server.
+After some inital SMTP handshaking, the SMTP client sends Alice's message into the TCP connection.
+At Bob's mail server, the server side of SMTP receives the message. Bob's mail server
+then places the message in Bob's mailbox.
+Bob invokes his user agent to read the messag at his convenience.
+Let  get into more detila about how SMTP transfers a message froma sending mail server to a receving mail server.
+We will see that the SMTP protocol has many similarities with protolcs that are used for face-to-face human interaction. First, the
+client SMTP has TCP establish a connection to port 25 at the server SMTP. If the server is down, the client 
+tries again later. Conace this connection is established, the server and client perform some application-layer handshaking.
+SMTP clients ans servers introduce themselves before transferrring infromation. During this SMTP handshaking phase, the SMTP client indicates the e-mail address of the sender
+and the e-mail address of the recipient. Once the SMTP client and server have introduced themselves to each other, the client sends the message, SMTP can coun on reliable data transfer service of TCP to get the messag to the server without errors.
+The client then repeats this process over the same TCP conneciton if 
+it has other messages to send to ther server, otherwise, it instructs TCP to close the connection.

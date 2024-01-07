@@ -1,0 +1,9 @@
+Content Distribution Netowkr typicaly adopt one of two different server placement philosphies.
+1. Enter Deep: One philosophy, pioneeded by Akamai, is to enter deep into the acces networks of Intenet Service Providers, by deploying server clusters in access
+ISP's all over the world. Akamai takes this approach with cluster in thousands oflocation. The goal is to get close to end users, thereby improving user-perceived delay
+and throughput by decreasing the number of links and routes between the end  user and the CDN server from which it receives content. Because of this highly 
+distributed design, the task of maintaining and managing the clusters becomes challenging.
+2. Bring Home" A second design philosphy, taken by Limelight and manu other CDN companies, is to bring the ISPs home by building large clusters at a smaller number of sites.
+Instead of getting inside the access ISPs, tehse CDNs typically place their clusters inInternet Exchange Points. Compared with
+the enter-deep design philosophy, the bring-home design typically results inlower maintenance and managment overhead, possibly at the expense of higher delay and lower throughput
+to end users.

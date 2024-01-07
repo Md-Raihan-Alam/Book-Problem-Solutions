@@ -1,0 +1,7 @@
+When a user contacts a e-commerce site from his PC,  the request comes into the Site web server, the server creates a unique identification
+number and creates an entry in its back-end database that is indexed by the identification number. Thw site web server then responds to user browser, including in the HTTP response a Set-cookie header which contains the 
+identification number. When user's browser receives the HTTP response message, it sees the Set-cookie header. Thw broswer then appends a line to the special cookie file that it manages.
+This line include the hostname of the server and the identification number in the Set-cookie header. Note that the cookie file already has an entry for site, since user has visited that site in the past,
+As user continues to browse tha site, each tiem she requests a web pagem his broswer consults his cookie file, extracts his identification number for this site and puts a cookie header line that 
+includes the identification number int he HTTP request. In this manner the site server is able to track user activity at the e commerce site, even if the site do not know ther user,
+it knows exactly which page the user with specific identification cookies has visited

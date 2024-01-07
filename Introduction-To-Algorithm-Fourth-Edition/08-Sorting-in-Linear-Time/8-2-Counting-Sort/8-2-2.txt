@@ -1,0 +1,8 @@
+Counting Sort is stable because it processes elements in the order they appear, and when placing equal elements in the sorted array, it does so in their original order, 
+preserving their relative positions.
+
+In Counting Sort, the basic idea is to count the occurrences of each element in the input array and then use this information to place the elements in their correct sorted positions. 
+The counting process involves creating an auxiliary array to store the count of each element.
+
+Now, for stability, consider two elements in the input array with the same value. When counting the occurrences, the algorithm increments the count for each occurrence of an element. 
+When placing the elements back into the sorted array, it does so in a way that maintains the relative order of elements with the same value.

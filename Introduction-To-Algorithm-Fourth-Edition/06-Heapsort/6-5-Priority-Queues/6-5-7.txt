@@ -1,0 +1,8 @@
+Initialization: A is a heap except that A[i] might be larger that it's parent, because it has been modified. 
+A[i] is larger than its children, because otherwise the guard clause would fail and the loop will not be entered (the new value is larger than the old value and the old value is larger 
+than the children).
+
+Maintenance: When we exchange A[i] with its parent, the max-heap property is satisfied except that now A[PARENT(i)] might be larger than its parent. Changing 
+i to its parent maintains the invariant.
+
+Termination: The loop terminates whenever the heap is exhausted or the max-heap property for A[i] and its parent is preserved. At the loop termination, A is a max-heap.
