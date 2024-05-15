@@ -1,0 +1,2 @@
+The source and destination port numbers for the segments travelling from Host B 
+to Host A; Source port number y and destination port number X.

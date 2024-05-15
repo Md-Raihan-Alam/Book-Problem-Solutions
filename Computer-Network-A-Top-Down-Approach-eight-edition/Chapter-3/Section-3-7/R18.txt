@@ -1,0 +1,1 @@
+False. The slow start threshold(ssthresh) is set to one half of its previous value in the congestion window.

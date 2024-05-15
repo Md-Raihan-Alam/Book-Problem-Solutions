@@ -1,0 +1,12 @@
+The difference in the number of sockets used in UDP and TCP servers is related to the nature of the protocols.
+
+In UDP, each packet is sent as an independent entity, and there is no persistent connection. Therefore, a single socket is sufficient to handle incoming packets from multiple clients. 
+The server binds to a specific port, listens for incoming datagrams, processes them, and sends the response back to the client.
+
+On the other hand, TCP is a connection-oriented protocol that establishes a reliable, bi-directional communication channel between the client and the server. The serverSocket in the 
+TCP server is used to listen for incoming connection requests, and once a connection is established, a new socket (connectionSocket) is created specifically for that connection. This 
+new socket is used to communicate with the individual client, and a separate connectionSocket is created for each new client connection.
+
+If the TCP server were to support "n" simultaneous connections from different client hosts, it would need "n" sockets to handle these connections concurrently. Each new connection 
+would be accepted on a new socket, allowing the server to manage multiple connections simultaneously without interference between them. This is because each socket represents a unique 
+communication channel for a specific client.

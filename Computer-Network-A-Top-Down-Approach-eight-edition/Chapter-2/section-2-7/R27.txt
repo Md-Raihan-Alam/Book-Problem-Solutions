@@ -1,0 +1,7 @@
+In a TCP (Transmission Control Protocol) client-server application, the server program must be executed before the client program. This is because the server needs to establish a 
+listening socket, bind it to a specific IP address and port, and be ready to accept incoming connections. The client program, once the server is running, can then establish a 
+connection with the server.
+
+On the other hand, in a UDP (User Datagram Protocol) client-server application, the client program may be executed before the server program. UDP is connectionless, and clients can 
+send datagrams to the server without the server actively listening for connections. The server, when it runs, can process incoming datagrams from any client, making the order of 
+execution less critical in UDP compared to TCP.

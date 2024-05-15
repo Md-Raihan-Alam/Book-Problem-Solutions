@@ -1,0 +1,5 @@
+The TCP(transmission control protocol) can choke the application's sending rate at times of 
+bottleneck.
+The UDP( user datagram protocol) does not keep joining state and does not track any of the limits
+Even though data transfer by TCP is dependable, some applications do not need dependable TCP data transfer. So, UDP
+(user datagram protocol) rather than TCP (transmission control protocol)

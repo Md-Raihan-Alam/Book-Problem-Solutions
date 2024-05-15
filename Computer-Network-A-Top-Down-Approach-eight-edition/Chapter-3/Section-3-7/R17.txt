@@ -1,0 +1,2 @@
+Consider data, Two TCP connections are present over some bottleneck link of rate R bps. Both connections have a huge file to send. transmissions of the files start at the same time.
+Transmission rate would TCP like to give to each of the connections= R/2.

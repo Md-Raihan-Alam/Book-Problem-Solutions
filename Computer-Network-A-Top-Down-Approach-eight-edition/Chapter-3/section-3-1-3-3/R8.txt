@@ -1,0 +1,5 @@
+For each persistent connection, the Web server creates a separate “connection socket”. Each connection socket is identified with a four-tuple:
+ (source IP address, source port number, destination IP address, destination port number). When host C receives and IP datagram, it examines these four fields in the datagram/segment to determine to 
+ which socket it should pass the payload of the TCP segment. Thus, the requests from A and B pass through different sockets. The identifier for both of these sockets has 80 for the destination port;
+  however, the identifiers for these sockets have different values for source IP addresses. Unlike UDP, when the transport layer passes a TCP segment’s payload to the application process, it does not 
+  specify the source IP address, as this is implicitly specified by the socket identifier

@@ -1,0 +1,2 @@
+Most firewalls are configured to block UDP traffic, using TCP for video and voice tranffic lets traffic though 
+the firewalls, So, that void and video traffic is often sent over TCP rather UDP in today's Internet.

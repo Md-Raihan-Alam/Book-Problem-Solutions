@@ -1,0 +1,5 @@
+a=> Sender has to provide the address of the destination name. It is written
+by the delegate to the planet's mail service
+After receive the destination address, teh envelop the written on the top details
+
+b=>No. The mail service ever hasve not to open the envelop and examine the letter in order to provide its service

@@ -1,0 +1,15 @@
+Consider the delay in receiving a response for a search query.In slow start, the server requires three TCP windows to deliver the response.
+
+Thus, the time from when an end system initiates a TCP connection until the time when it receives the last packet of the response is roughly 4*round trip time (RTT).
+
+One RTT is used to set up the TCP connection and three RTTs are used for the three windows of data plus the processing time in the data center. These RTT delays can lead to a noticeable delay in returning search results for a significant fraction of queries.
+
+Moreover, there can be significant packet loss in access networks, leading to TCP retransmissions and even larger delays.
+
+Improve the user-perceived performance is to utilize TCP splitting by breaking the TCP connection at the front-end server.
+
+The client establishes a TCP connection to the nearby front-end, and the front-end maintains a persistent TCP connection to the data center with a very large TCP congestion window with TCP splitting.
+
+Hence, it is justified that the response time roughly becomes 4*RTTFE +RTTBE  + processing time.
+
+ Where, RTTFE is the round-trip time between client and front-end server, and RTTBE  is the round-trip time between the front-end server and the data center (back-end server).

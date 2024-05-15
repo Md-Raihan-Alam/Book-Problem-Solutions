@@ -1,0 +1,7 @@
+Selective Repeat java applet protocol:
+If sender sent more than one packet, it reaches the destionation might be one packet is killed and other packets stored in buffer at end receiver.
+The receiver  send  acknowldgement to sender, but the sender does not receiver acknowldgement.
+
+Go-Bank-N protocol:
+If sender sent more than one packet, it reaches the destionation might be one packet is killed and other packets reached destination without buffering.
+The receiver  does not send  acknowldgement to sender, but the sender receive acknowldgement.

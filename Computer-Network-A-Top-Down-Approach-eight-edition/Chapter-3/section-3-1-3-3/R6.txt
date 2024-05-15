@@ -1,0 +1,10 @@
+Yes. It is possible for an application to enjoy reliable data transfer even when it runs over UDP(User Datagram Protocl), which is a connectionless
+transport protocol that does not provide any guarantess for reliable data transmission.
+One way to achieve reliable data transfer over UDP is by implementing the reliability mechanism at the application layer.
+For example, the application can user acknowldegments, retransmission, and sequence numbers to ensure that all data is delivered reliably to the receiver.
+This aproach is often used in real-time applications, such as online gaming and video streaming, where a small amount of packet loss or delay
+can have a significant impact on the user experience.
+
+Another approach is to use a reliable UDP (RUDP) protocol, which is a modified version of UDP that provides reliable data transfer. RUDP adds reliability mechanisms, such as acknowledgments and 
+retransmissions, to ensure that data is delivered reliably to the receiver. RUDP is commonly used in applications that require low latency and high throughput, such as online gaming, voice over IP (VoIP),
+and streaming media.

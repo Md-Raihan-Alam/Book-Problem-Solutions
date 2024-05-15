@@ -1,0 +1,1 @@
+Sequence numbers are necessary for a receiver to find out whether an arriving packet contains new data or is a retransmission in our rdt protocols

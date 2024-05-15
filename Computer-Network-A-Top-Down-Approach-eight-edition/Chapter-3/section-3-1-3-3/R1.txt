@@ -1,0 +1,9 @@
+a=>Call this protocol Simple Transport Protocol (STP). At the sender side, STP accepts from the sending process a chunk of data not exceeding 1196 bytes, 
+a destination host address, and a destination port number. STP adds a four- byte header to each chunk and puts the port number of the destination process in this header. 
+STP then gives the destination host address and the resulting segment to the network layer. The network layer delivers the segment to STP at the destination host. STP then
+ examines the port number in the segment, extracts the data from the segment, and passes the data to the process identified by the port number.
+b=>The segment now has two header fields: a source port field and destination port field. At the sender side, STP accepts a chunk of data not exceeding 1192 bytes, 
+a destination host address, a source port number, and a destination port number. STP creates a segment which contains the application data, source port number, and 
+destination port number. It then gives the segment and the destination host address to the network layer. After receiving the segment, STP at the receiving host gives the
+ application process the application data and the source port number. 
+c=>No, the transport layer does not have to do anything in the core; the transport layer "lives" in the end systems.

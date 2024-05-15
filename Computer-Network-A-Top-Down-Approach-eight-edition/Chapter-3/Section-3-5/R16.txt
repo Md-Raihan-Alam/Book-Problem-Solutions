@@ -1,0 +1,3 @@
+First segment, seq=43, ack=80 ('C')
+Second segment, seq=80, ack=44 ('C')
+Third segment, seq=44, ack=81 ('R')

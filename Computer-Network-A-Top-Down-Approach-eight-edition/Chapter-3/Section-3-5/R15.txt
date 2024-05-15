@@ -1,0 +1,9 @@
+a.Given,
+    First Segment=90
+    Second Segment=110
+    Data in the first segment=110-90=20
+b. Consider the first segment is lost but second segment arrives at B. In the acknowldegment that Host B sends to Host A, then the acknowldegment number will be first 
+segment of sequence number, that is 90.When Host B receives the second segment with sequence number 110, it will send an acknowledgment with an acknowledgment number 
+equal to the next expected sequence number, which is 91. The acknowledgment number indicates the sequence number of the next byte that Host B is expecting to receive. 
+Since the first segment with sequence number 90 was lost, Host B will assume that the next byte it expects to receive is byte 90, which is the first byte of the lost 
+segment. Therefore, the acknowledgment number  in the acknowledgment sent by Host B to Host A will be 90.

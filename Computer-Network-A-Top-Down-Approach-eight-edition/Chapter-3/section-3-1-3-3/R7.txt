@@ -1,0 +1,2 @@
+Yes, For each received segment, at the socket interface, the operating system will provide the 
+process with the IP addresses to determine the origins fo the individual segments.

@@ -1,0 +1,2 @@
+Yes, a timer still is necessary in protocol rdt 3.0
+Assume the packet is loss, the sender nows the round trip delay time. It is used for estimate the transfer packet time.
